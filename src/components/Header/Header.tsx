@@ -34,7 +34,7 @@ const Header = () => {
   const downloadCV = () => {
     // Créer un lien temporaire pour télécharger le CV
     const link = document.createElement('a');
-    link.href = '../../../public/CV Professionnel vert Moderne Nature .pdf'; // Assurez-vous que votre CV est dans le dossier public/
+    link.href = '/cv-abdou-aziz-diop.pdf'; // Chemin correct sans espaces
     link.download = 'CV_Abdou_Aziz_Diop.pdf';
     link.target = '_blank';
     document.body.appendChild(link);
