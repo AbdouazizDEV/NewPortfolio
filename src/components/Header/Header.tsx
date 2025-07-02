@@ -32,9 +32,12 @@ const Header = () => {
   };
 
   const downloadCV = () => {
+    // URL externe vers votre CV (remplacez par votre vraie URL)
+    const cvUrl = 'https://drive.google.com/file/d/1WqV239o4TiKrY21YQzwrGHuBEC4qYvMb/view?usp=sharing';
+    
     // Créer un lien temporaire pour télécharger le CV
     const link = document.createElement('a');
-    link.href = '/cv-abdou-aziz-diop.pdf'; // Chemin correct sans espaces
+    link.href = cvUrl;
     link.download = 'CV_Abdou_Aziz_Diop.pdf';
     link.target = '_blank';
     document.body.appendChild(link);

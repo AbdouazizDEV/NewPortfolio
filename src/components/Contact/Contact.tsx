@@ -94,7 +94,7 @@ const Contact = () => {
       icon: MapPin,
       label: 'Localisation',
       value: 'Dakar, Sénégal',
-      href: '#',
+      href: 'https://www.google.com/maps/place/Dakar/@14.7166667,-17.4666667,12z/data=!3m1!4b1!4m6!3m5!1s0x167995a02260431d:0x6650fd4ba773e60!8m2!3d14.7166667!4d-17.4666667!16s%2Fg%2F11c4022sqw?entry=ttu&g_ep=EgoyMDI1MDIwMi4wIKXMDSoASAFQAw%3D%3D',
       color: 'text-orange-600'
     }
   ];

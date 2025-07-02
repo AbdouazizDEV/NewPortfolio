@@ -54,14 +54,14 @@ const Education = () => {
       issuer: 'Coursera',
       date: '2024',
       icon: '🗄️',
-      link: '#'
+      link: 'https://www.coursera.org/account/accomplishments/verify/2234567890'
     },
     {
       title: 'APIs in Node.js RESTful Backend',
       issuer: 'Coursera',
       date: '2024',
       icon: '🔗',
-      link: '#'
+      link: 'https://www.coursera.org/account/accomplishments/verify/2234567890'
     },
     {
       title: 'Certificat Développement Web',
