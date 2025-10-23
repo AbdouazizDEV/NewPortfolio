@@ -1,11 +1,46 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, ExternalLink, Github, MapPin, Briefcase } from 'lucide-react';
+import { Calendar, ExternalLink, Github, MapPin, Briefcase, BookOpen } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
     {
+      id: 0,
+      period: 'Août 2025',
+      company: 'Ecole au Sénégal (EAS)',
+      position: 'Développeur Full-Stack',
+      project: 'Mise en place de la platforme éducative TAGGAT MA',
+      technologies: ['Laravel 12', 'Angular 18', 'Mysql','Redis','Vue.js','Swagger','GitLab'],
+      link: 'https://web-eas.taggatma.com/',
+      link2: 'https://api-eas.taggatma.com/api/documentation#',
+      description: 'Développement de la plateforme éducatif TAGGAT MA, incluant la gestion des élèves, des cours, des professeurs et des documents officiels.',
+      achievements: [
+        'Architecture et développement du backend avec Laravel 12',
+        'Interface utilisateur moderne avec Angular 18',
+        'Optimisation des performances et sécurité renforcée',
+        'Intégration avec les systèmes gouvernementaux existants',
+        'Gestion des permissions et des rôles',
+        'Gestion des projets',
+      ]
+    },
+    {
       id: 1,
+      period: 'Août 2025',
+      company: 'Xarala',
+      position: 'Développeur Full-Stack',
+      project: 'Une solution fintech d\'avance sur salaire composée de trois composants principaux : 1. Application mobile pour les employés 2. Application web pour les entreprises 3. Application web pour l\'administration de la plateforme',
+      technologies: ['Next.JS', 'Nest.JS', 'Mysql','React Native','Expo','GitLab'],
+      description: 'Développement de la solution fintech d\'avance sur salaire composée de trois composants principaux : 1. Application mobile pour les employés 2. Application web pour les entreprises 3. Application web pour l\'administration de la plateforme.',
+      achievements: [
+        'Développement de l\'application mobile avec React Native et Expo',
+        'Développement de l\'application web avec Next.JS et Nest.JS',
+        'Développement de l\'application web pour l\'administration de la plateforme avec Next.JS et Nest.JS',
+        'Développement de l\'API avec Nest.JS',
+        'Développement de la base de données avec Mysql',
+      ]
+    },
+    {
+      id: 2,
       period: 'Avril 2025',
       company: 'Niane Technologie',
       position: 'Développeur Full-Stack',
@@ -21,7 +56,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 2,
+      id: 3,
       period: 'Mars 2025',
       company: 'Niane Technologie',
       position: 'Développeur Full-Stack',
@@ -37,7 +72,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 3,
+      id: 4,
       period: 'Décembre 2024',
       company: 'Freelance',
       position: 'Développeur Full-Stack',
@@ -53,7 +88,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 4,
+      id: 5,
       period: 'Octobre 2024',
       company: 'Freelance',
       position: 'Développeur Full-Stack',
@@ -186,6 +221,21 @@ const Experience = () => {
                         </motion.a>
                       )}
                     </div>
+                    {exp.link2 && (
+                      <div className="flex flex-wrap gap-4 mt-4">
+                      <motion.a
+                        href={exp.link2}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="flex items-center px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors"
+                      >
+                        <BookOpen size={16} className="mr-2" />
+                        Documentation API
+                      </motion.a>
+                      </div>
+                    )}
                   </motion.div>
                 </div>
               </motion.div>

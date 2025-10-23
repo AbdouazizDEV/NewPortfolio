@@ -76,6 +76,20 @@ const Education = () => {
       date: '2023',
       icon: '🤖',
       link: '#'
+    },
+    {
+      title: 'Web3 and Blockchain',
+      issuer: 'FORCE-N',
+      date: '2023',
+      icon: '🕸️',
+      link: '#'
+    },
+    {
+      title: 'L\'essentiel sur Flutter pour le développement mobile',
+      issuer: 'LinkedIn Learning',
+      date: '2023',
+      icon: '🛠️',
+      link: '#'
     }
   ];
 

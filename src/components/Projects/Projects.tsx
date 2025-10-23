@@ -7,7 +7,30 @@ const Projects = () => {
 
   const projects = [
     {
+      id: 0,
+      title: 'TAGGAT MA',
+      description: 'Plateforme éducative TAGGAT MA, avec gestion des élèves, des cours, des professeurs et des documents officiels.',
+      image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1761196405/taggat_MA_tmujxx.jpg',
+      technologies: ['Laravel 12', 'Angular 19', 'Mysql','Redis','Vue.js','Swagger','GitLab'],
+      category: 'web',
+      link: 'https://web-eas.taggatma.com/',
+      link2: 'https://api-eas.taggatma.com/api/documentation#',
+      github: null,
+      featured: true
+    },
+    {
       id: 1,
+      title: 'Credex FINTRA',
+      description: 'Plateforme fintech d\'avance sur salaire composée de trois composants principaux : 1. Application mobile pour les employés 2. Application web pour les entreprises 3. Application web pour l\'administration de la plateforme',
+      image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1761196204/logoColore_u3qdsk.png',
+      technologies: ['React Native','Expo','Next.JS', 'Nest.JS', 'Mysql','GitLab','Tailwind CSS'],
+      category: 'mobile',
+      link: null,
+      github: null,
+      featured: true
+    },
+    {
+      id: 2,
       title: 'Assemblée Nationale du Sénégal',
       description: 'Plateforme officielle de l\'Assemblée Nationale avec gestion des députés, sessions parlementaires et documents officiels.',
       image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1751498219/Assemblee-Nationale-Senegalaise-_wjdc4u.jpg',
@@ -18,7 +41,7 @@ const Projects = () => {
       featured: true
     },
     {
-      id: 2,
+      id: 3,
       title: 'The Booker\'s',
       description: 'Plateforme complète de gestion de réservations pour restaurants avec interface client et back-office.',
       image: 'https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -29,7 +52,7 @@ const Projects = () => {
       featured: true
     },
     {
-      id: 3,
+      id: 4,
       title: 'Âllo Docteur',
       description: 'Application de gestion de rendez-vous médicaux avec interface patients et médecins.',
       image: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -40,7 +63,7 @@ const Projects = () => {
       featured: true
     },
     {
-      id: 4,
+      id: 5,
       title: 'Réseau Social Tailleurs',
       description: 'Plateforme sociale pour tailleurs avec partage de créations et mise en relation client-tailleur.',
       image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1751498360/DALL_E_2023-12-10_03.54.21_-_An_illustration_showing_a_social_media_interface_with_fashion_posts_highlighting_digital_interactions_such_as_likes_and_comments_and_a_one-click_pur_480x480_hp86uf.webp',
@@ -51,7 +74,7 @@ const Projects = () => {
       featured: false
     },
     {
-      id: 5,
+      id: 6,
       title: 'E-Commerce Platform',
       description: 'Plateforme e-commerce moderne avec gestion des produits, commandes et paiements.',
       image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -62,7 +85,7 @@ const Projects = () => {
       featured: false
     },
     {
-      id: 6,
+      id: 7,
       title: 'Mobile Banking App',
       description: 'Application mobile de banque avec transferts, gestion de comptes et notifications.',
       image: 'https://images.pexels.com/photos/4386374/pexels-photo-4386374.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -91,16 +114,27 @@ const Projects = () => {
     const colors = {
       'Laravel': 'bg-red-100 text-red-700',
       'Laravel 11': 'bg-red-100 text-red-700',
+      'Laravel 12': 'bg-emerald-100 text-emerald-700',
       'React.js': 'bg-blue-100 text-blue-700',
       'Node.js': 'bg-green-100 text-green-700',
       'Angular 18': 'bg-red-100 text-red-700',
+      'Angular 19': 'bg-emerald-100 text-emerald-700',
       'PostgreSQL': 'bg-blue-100 text-blue-700',
       'MySQL': 'bg-orange-100 text-orange-700',
       'MongoDB': 'bg-green-100 text-green-700',
       'Flutter': 'bg-blue-100 text-blue-700',
       'Firebase': 'bg-yellow-100 text-yellow-700',
       'Cloudinary': 'bg-purple-100 text-purple-700',
-      'Supabase': 'bg-emerald-100 text-emerald-700'
+      'Supabase': 'bg-cyan-100 text-emerald-700',
+      'Tailwind CSS': 'bg-blue-100 text-blue-700',
+      'Next.js': 'bg-yellow-100 text-green-700 #143731',
+      'Nest.js': 'bg-cyan-100 text-orange-700 #143731',
+      'GitLab': 'bg-purple-100 text-purple-700 #143731',
+      'Swagger': 'bg-yellow-100 text-yellow-700',
+      'Expo': 'bg-emerald-100 text-emerald-700',
+      'React Native': 'bg-emerald-100 text-emerald-700',
+      'Vue.js': 'bg-blue-100 text-blue-700',
+      'Github': 'bg-purple-100 text-purple-700',
     };
     return colors[tech as keyof typeof colors] || 'bg-gray-100 text-gray-700';
   };

@@ -22,14 +22,19 @@ const Skills = () => {
       icon: Code,
       color: 'emerald',
       skills: [
-        { name: 'HTML5', level: 95, icon: '🌐' },
-        { name: 'CSS3', level: 90, icon: '🎨' },
-        { name: 'JavaScript', level: 92, icon: '⚡' },
+        { name: 'HTML5', level: 98, icon: '🌐' },
+        { name: 'CSS3', level: 95, icon: '🎨' },
+        { name: 'JavaScript', level: 95, icon: '⚡' },
         { name: 'TypeScript', level: 85, icon: '📘' },
         { name: 'React.js', level: 90, icon: '⚛️' },
-        { name: 'Angular 18', level: 82, icon: '🅰️' },
+        { name: 'Angular', level: 82, icon: '🅰️' },
         { name: 'Tailwind CSS', level: 88, icon: '💨' },
-        { name: 'Responsive Design', level: 93, icon: '📱' }
+        { name: 'Responsive Design', level: 93, icon: '📱' },
+        { name: 'Next.js', level: 88, icon: '🔗' },
+        { name: 'React Native', level: 87, icon: '📱' },
+        { name: 'Expo', level: 90, icon: '🔴' },
+        { name: 'Flutter', level: 85, icon: '�️' },
+        { name: 'Dart', level: 85, icon: '🐦' },
       ]
     },
     backend: {
@@ -42,8 +47,12 @@ const Skills = () => {
         { name: 'NestJS', level: 80, icon: '🐱' },
         { name: 'PHP', level: 87, icon: '🐘' },
         { name: 'Laravel 11', level: 90, icon: '🔴' },
-        { name: 'API REST', level: 92, icon: '🔗' },
-        { name: 'Prisma ORM', level: 83, icon: '🔷' }
+        { name: 'API REST', level: 92, icon: ' 🔗' },
+        { name: 'Prisma ORM', level: 83, icon: '🔷' },
+        { name: 'Swagger', level: 85, icon: '🔗' },
+        { name: 'Redis', level: 80, icon: '🐶' },
+        { name: 'Socket.io', level: 87, icon: '🔗' },
+        { name: 'WebSocket', level: 90, icon: '🔗' }
       ]
     },
     database: {
@@ -57,7 +66,13 @@ const Skills = () => {
         { name: 'Mongoose', level: 80, icon: '📊' },
         { name: 'Firebase', level: 78, icon: '🔥' },
         { name: 'Neon Postgres', level: 75, icon: '💫' },
-        { name: 'Supabase', level: 85, icon: '⚡' }
+        { name: 'Supabase', level: 85, icon: '⚡' },
+        { name: 'Prisma ORM', level: 83, icon: '🔷' },
+        { name: 'Swagger', level: 85, icon: '🔗' },
+        { name: 'Redis', level: 80, icon: '🐶' },
+        { name: 'Socket.io', level: 87, icon: '🔗' },
+        { name: 'WebSocket', level: 90, icon: '🔗' },
+        { name: 'WebSocket', level: 90, icon: '🔗' },
       ]
     },
     tools: {
@@ -70,7 +85,7 @@ const Skills = () => {
         { name: 'GitHub', level: 92, icon: '🐙' },
         { name: 'Cloudinary', level: 85, icon: '☁️' },
         { name: 'LWS', level: 80, icon: '🚀' },
-        { name: 'Docker', level: 75, icon: '🐳' }
+        { name: 'Docker', level: 75, icon: '🐳' },
       ]
     },
     mobile: {
@@ -80,7 +95,8 @@ const Skills = () => {
       skills: [
         { name: 'Flutter', level: 78, icon: '💙' },
         { name: 'React Native', level: 75, icon: '📱' },
-        { name: 'Progressive Web Apps', level: 82, icon: '🌐' }
+        { name: 'Progressive Web Apps', level: 82, icon: '🌐' },
+        { name: 'Expo', level: 90, icon: '🔴' },
       ]
     },
     soft: {
@@ -93,7 +109,8 @@ const Skills = () => {
         { name: 'Communication', level: 88, icon: '💬' },
         { name: 'Apprentissage rapide', level: 93, icon: '📚' },
         { name: 'Curiosité technologique', level: 98, icon: '🔍' },
-        { name: 'Adaptabilité', level: 91, icon: '🔄' }
+        { name: 'Adaptabilité', level: 91, icon: '🔄' },
+        { name: 'Gestion de projet', level: 90, icon: '�' },
       ]
     }
   };
@@ -105,7 +122,11 @@ const Skills = () => {
       purple: 'from-purple-500 to-purple-600 text-purple-600 bg-purple-50 border-purple-200',
       orange: 'from-orange-500 to-orange-600 text-orange-600 bg-orange-50 border-orange-200',
       pink: 'from-pink-500 to-pink-600 text-pink-600 bg-pink-50 border-pink-200',
-      indigo: 'from-indigo-500 to-indigo-600 text-indigo-600 bg-indigo-50 border-indigo-200'
+      indigo: 'from-indigo-500 to-indigo-600 text-indigo-600 bg-indigo-50 border-indigo-200',
+      gray: 'from-gray-500 to-gray-600 text-gray-600 bg-gray-50 border-gray-200',
+      yellow: 'from-yellow-500 to-yellow-600 text-yellow-600 bg-yellow-50 border-yellow-200',
+      green: 'from-green-500 to-green-600 text-green-600 bg-green-50 border-green-200',
+      red: 'from-red-500 to-red-600 text-red-600 bg-red-50 border-red-200'
     };
     return colors[color as keyof typeof colors];
   };
