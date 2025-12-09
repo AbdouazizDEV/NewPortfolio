@@ -104,7 +104,7 @@ const Projects = () => {
       category: 'web',
       link: 'https://bootcampsxaralafront.netlify.app/',
       github: 'https://github.com/AbdouazizDEV/Bootcamps-Xarala-Front',
-      featured: true
+      featured: false
     }
   ];
 
