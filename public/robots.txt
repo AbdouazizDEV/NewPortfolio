@@ -1,0 +1,30 @@
+# robots.txt pour le portfolio d'Abdou Aziz Diop
+# https://abdouazizdiop.dev/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://abdouazizdiop.dev/sitemap.xml
+
+# Crawl-delay (optionnel, pour éviter de surcharger le serveur)
+Crawl-delay: 1
+
+# Bloquer les fichiers inutiles
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /node_modules/
+Disallow: /.git/
+
+# Autoriser les ressources importantes
+Allow: /src/
+Allow: /public/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+
