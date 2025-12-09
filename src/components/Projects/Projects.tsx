@@ -94,6 +94,17 @@ const Projects = () => {
       link: null,
       github: '#',
       featured: false
+    },
+    {
+      id: 8,
+      title: 'Projet Xarala (Mini-projet)',
+      description: 'Xarala forme des milliers d\'apprenants à des technologies web modernes. Pour tester ma polyvalence, ils m\'ont confié un mini-projet à réaliser en 48 h chrono. Aucun code ni maquette ne sont fournis : je suis partiras de zéro, en m\'inspirant des bonnes pratiques et en piochant librement dans les frameworks open-source.',
+      image: 'https://res.cloudinary.com/dao8m0if6/image/upload/v1765284992/logo.378a33b2eded_phc2yg.webp',
+      technologies: [ 'Nest.js', 'Neon Postgres','React.js','GitHub','Tailwind CSS','Vite','Prisma ORM'],
+      category: 'web',
+      link: 'https://bootcampsxaralafront.netlify.app/',
+      github: 'https://github.com/AbdouazizDEV/Bootcamps-Xarala-Front',
+      featured: true
     }
   ];
 
