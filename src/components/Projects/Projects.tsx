@@ -122,7 +122,7 @@ const Projects = () => {
       title: 'TravelAgency',
       description: 'Plateforme web moderne permettant aux clients de rechercher des offres de voyage et d\'envoyer automatiquement leur demande via WhatsApp à l\'agence, avec un back-office simplifié pour la gestion des offres.',
       image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1765917296/Screenshot_20251216_203258_ifxhmp.png',
-      technologies: [ 'Nest.JS', 'React.JS','Docker', 'Neon Postgres','GitHub','Tailwind CSS','Vite','Prisma ORM'],
+      technologies: [ 'Nest.js', 'React.js','Docker', 'Neon Postgres','GitHub','Tailwind CSS','Vite','Prisma ORM'],
       category: 'web',
       link: 'https://agence-de-voyage-front-tptc.vercel.app/',
       github: 'https://github.com/AbdouazizDEV/Agence_de_Voyage_front',
@@ -168,6 +168,13 @@ const Projects = () => {
       'React Native': 'bg-emerald-100 text-emerald-700',
       'Vue.js': 'bg-blue-100 text-blue-700',
       'Github': 'bg-purple-100 text-purple-700',
+      'Prisma ORM': 'bg-purple-100 text-purple-700',
+      'Docker': 'bg-emerald-100 text-emerald-700',
+      'Socket.io': 'bg-purple-100 text-purple-700',
+      'Vite': 'bg-emerald-100 text-emerald-700',
+      'WebSocket': 'bg-purple-100 text-purple-700',
+      'Neon Postgres': 'bg-emerald-100 text-emerald-700',
+      'GitHub': 'bg-purple-100 text-purple-700',
     };
     return colors[tech as keyof typeof colors] || 'bg-gray-100 text-gray-700';
   };
