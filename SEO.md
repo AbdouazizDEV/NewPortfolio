@@ -100,3 +100,5 @@ npm run preview
 
 ⚠️ **Mise à jour**: Mettre à jour régulièrement le sitemap.xml avec la date de dernière modification.
 
+
+

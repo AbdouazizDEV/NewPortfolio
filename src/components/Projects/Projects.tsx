@@ -105,6 +105,28 @@ const Projects = () => {
       link: 'https://bootcampsxaralafront.netlify.app/',
       github: 'https://github.com/AbdouazizDEV/Bootcamps-Xarala-Front',
       featured: false
+    },
+    {
+      id:9,
+      title: 'Bambey Bu Bess',
+      description: 'Nous croyons en un Bambey où chaque citoyen a accès à des infrastructures de qualité, à une éducation d\'excellence, à des soins de santé accessibles et à des opportunités économiques équitables. Notre vision est celle d\'une ville dynamique, inclusive et tournée vers l\'avenir.',
+      image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1764308060/activities/haskvffym6lrwjaatg5n.png',
+      technologies: [ 'Next.js', 'Neon Postgres','GitHub','Tailwind CSS','Vite','Prisma ORM'],
+      category: 'web',
+      link: 'https://bambeybubess.netlify.app/',
+      github: 'https://github.com/AbdouazizDEV/bambey-connect-hub',
+      featured: false
+    },
+    {
+      id:10,
+      title: 'TravelAgency',
+      description: 'Plateforme web moderne permettant aux clients de rechercher des offres de voyage et d\'envoyer automatiquement leur demande via WhatsApp à l\'agence, avec un back-office simplifié pour la gestion des offres.',
+      image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1765917296/Screenshot_20251216_203258_ifxhmp.png',
+      technologies: [ 'Nest.JS', 'React.JS','Docker', 'Neon Postgres','GitHub','Tailwind CSS','Vite','Prisma ORM'],
+      category: 'web',
+      link: 'https://agence-de-voyage-front-tptc.vercel.app/',
+      github: 'https://github.com/AbdouazizDEV/Agence_de_Voyage_front',
+      featured: false
     }
   ];
 
