@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, ExternalLink, Github, MapPin, Briefcase, BookOpen } from 'lucide-react';
+import { Calendar, ExternalLink, Github, Briefcase, BookOpen } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
@@ -9,41 +8,20 @@ const Experience = () => {
       period: 'Janvier 2026 - Février 2026 (Freelance)',
       company: 'Freelance',
       position: 'Développeur Full-Stack',
-      project: 'Forum des Territoires - Plateforme communautaire de discussion',
-      technologies: ['Laravel', 'React.js', 'MySQL', 'Tailwind CSS', 'REST API'],
+      project: 'Forum des Territoires - Une plateforme stratégique de dialogue, d\'investissement et de coopération décentralisée',
+      technologies: ['Node.js', 'Express.js', 'React.js', 'Tailwind CSS'],
       link: 'https://forumdesterritoires.com/',
-      description: 'Développement complet de la plateforme Forum des Territoires, une plateforme communautaire permettant aux utilisateurs de discuter, échanger et partager des informations sur les territoires. Interface moderne et intuitive avec système de forums, catégories, et gestion des utilisateurs.',
+      description: 'Développement complet du site pour le Forum des territoires qui auras lieu à DoubleTree by Hilton Brussels City, Au Parlement Bruxellois Du 3 au 6 juin 2026.',
       achievements: [
-        'Architecture et développement du backend avec Laravel',
+        'Architecture et développement du Node.js avec Express.js',
         'Interface utilisateur responsive avec React.js et Tailwind CSS',
         'Système de forums avec catégories et sous-catégories',
-        'Gestion des utilisateurs, authentification et autorisations',
-        'Système de commentaires et interactions en temps réel',
         'Optimisation SEO et performance pour une meilleure visibilité',
         'Design moderne et responsive pour tous les appareils'
       ]
     },
     {
       id: 1,
-      period: 'Février 2026',
-      company: 'Freelance',
-      position: 'Développeur Full-Stack',
-      project: 'Mise en place de la platforme éducative TAGGAT MA',
-      technologies: ['Laravel 12', 'Angular 18', 'Mysql','Redis','Vue.js','Swagger','GitLab'],
-      link: 'https://web-eas.taggatma.com/',
-      link2: 'https://api-eas.taggatma.com/api/documentation#',
-      description: 'Développement de la plateforme éducatif TAGGAT MA, incluant la gestion des élèves, des cours, des professeurs et des documents officiels.',
-      achievements: [
-        'Architecture et développement du backend avec Laravel 12',
-        'Interface utilisateur moderne avec Angular 18',
-        'Optimisation des performances et sécurité renforcée',
-        'Intégration avec les systèmes gouvernementaux existants',
-        'Gestion des permissions et des rôles',
-        'Gestion des projets',
-      ]
-    },
-    {
-      id: 2,
       period: 'Août 2025 - Décembre 2025 (CDD)',
       company: 'Ecole au Sénégal (EAS)',
       position: 'Développeur Full-Stack',
@@ -62,7 +40,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 3,
+      id: 2,
       period: 'Juin 2025 - Août 2025 (Stage)',
       company: 'Xarala',
       position: 'Développeur Full-Stack',
@@ -94,7 +72,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 5,
+      id: 3,
       period: 'Mars 2025 - Avril 2025 (Stage)',
       company: 'Niane Technologie',
       position: 'Développeur Full-Stack',
@@ -110,7 +88,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 6,
+      id: 4,
       period: 'Décembre 2024 - Janvier 2025 (Freelance)',
       company: 'Projet académique',
       position: 'Développeur Full-Stack',
@@ -126,7 +104,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 7,
+      id: 5,
       period: 'Octobre 2024',
       company: 'Projet académique',
       position: 'Développeur Full-Stack',
