@@ -1,12 +1,27 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, ExternalLink, Github, MapPin, Briefcase, BookOpen } from 'lucide-react';
+import { Calendar, ExternalLink, Github, Briefcase, BookOpen } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
     {
       id: 0,
-      period: 'Août 2025',
+      period: 'Janvier 2026 - Février 2026 (Freelance)',
+      company: 'Freelance',
+      position: 'Développeur Full-Stack',
+      project: 'Forum des Territoires - Une plateforme stratégique de dialogue, d\'investissement et de coopération décentralisée',
+      technologies: ['Node.js', 'Express.js', 'React.js', 'Tailwind CSS'],
+      link: 'https://forumdesterritoires.com/',
+      description: 'Développement complet du site pour le Forum des territoires qui auras lieu à DoubleTree by Hilton Brussels City, Au Parlement Bruxellois Du 3 au 6 juin 2026.',
+      achievements: [
+        'Architecture et développement du Node.js avec Express.js',
+        'Interface utilisateur responsive avec React.js et Tailwind CSS',
+        'Optimisation SEO et performance pour une meilleure visibilité',
+        'Design moderne et responsive pour tous les appareils'
+      ]
+    },
+    {
+      id: 1,
+      period: 'Août 2025 - Décembre 2025 (CDD)',
       company: 'Ecole au Sénégal (EAS)',
       position: 'Développeur Full-Stack',
       project: 'Mise en place de la platforme éducative TAGGAT MA',
@@ -24,8 +39,8 @@ const Experience = () => {
       ]
     },
     {
-      id: 1,
-      period: 'Août 2025',
+      id: 2,
+      period: 'Juin 2025 - Août 2025 (Stage)',
       company: 'Xarala',
       position: 'Développeur Full-Stack',
       project: 'Une solution fintech d\'avance sur salaire composée de trois composants principaux : 1. Application mobile pour les employés 2. Application web pour les entreprises 3. Application web pour l\'administration de la plateforme',
@@ -40,8 +55,8 @@ const Experience = () => {
       ]
     },
     {
-      id: 2,
-      period: 'Avril 2025',
+      id: 3,
+      period: 'Avril 2025 - Juin 2025 (Stage)',
       company: 'Niane Technologie',
       position: 'Développeur Full-Stack',
       project: 'Plateforme Assemblée Nationale du Sénégal',
@@ -88,7 +103,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 5,
+      id: 6,
       period: 'Octobre 2024',
       company: 'Freelance',
       position: 'Développeur Full-Stack',
