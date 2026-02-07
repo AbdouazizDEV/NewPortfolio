@@ -33,7 +33,7 @@ const Header = () => {
 
   const downloadCV = () => {
     // URL externe vers votre CV (remplacez par votre vraie URL)
-    const cvUrl = 'https://drive.google.com/file/d/1WqV239o4TiKrY21YQzwrGHuBEC4qYvMb/view?usp=sharing';
+    const cvUrl = 'https://drive.google.com/file/d/1PSnbZWIrNMRMa18sS9tlQNlU9KqmevZp/view?usp=sharing';
     
     // Créer un lien temporaire pour télécharger le CV
     const link = document.createElement('a');
