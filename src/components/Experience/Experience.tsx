@@ -6,7 +6,45 @@ const Experience = () => {
   const experiences = [
     {
       id: 0,
-      period: 'Août 2025',
+      period: 'Janvier 2026 - Février 2026 (Freelance)',
+      company: 'Freelance',
+      position: 'Développeur Full-Stack',
+      project: 'Forum des Territoires - Plateforme communautaire de discussion',
+      technologies: ['Laravel', 'React.js', 'MySQL', 'Tailwind CSS', 'REST API'],
+      link: 'https://forumdesterritoires.com/',
+      description: 'Développement complet de la plateforme Forum des Territoires, une plateforme communautaire permettant aux utilisateurs de discuter, échanger et partager des informations sur les territoires. Interface moderne et intuitive avec système de forums, catégories, et gestion des utilisateurs.',
+      achievements: [
+        'Architecture et développement du backend avec Laravel',
+        'Interface utilisateur responsive avec React.js et Tailwind CSS',
+        'Système de forums avec catégories et sous-catégories',
+        'Gestion des utilisateurs, authentification et autorisations',
+        'Système de commentaires et interactions en temps réel',
+        'Optimisation SEO et performance pour une meilleure visibilité',
+        'Design moderne et responsive pour tous les appareils'
+      ]
+    },
+    {
+      id: 1,
+      period: 'Février 2026',
+      company: 'Freelance',
+      position: 'Développeur Full-Stack',
+      project: 'Mise en place de la platforme éducative TAGGAT MA',
+      technologies: ['Laravel 12', 'Angular 18', 'Mysql','Redis','Vue.js','Swagger','GitLab'],
+      link: 'https://web-eas.taggatma.com/',
+      link2: 'https://api-eas.taggatma.com/api/documentation#',
+      description: 'Développement de la plateforme éducatif TAGGAT MA, incluant la gestion des élèves, des cours, des professeurs et des documents officiels.',
+      achievements: [
+        'Architecture et développement du backend avec Laravel 12',
+        'Interface utilisateur moderne avec Angular 18',
+        'Optimisation des performances et sécurité renforcée',
+        'Intégration avec les systèmes gouvernementaux existants',
+        'Gestion des permissions et des rôles',
+        'Gestion des projets',
+      ]
+    },
+    {
+      id: 2,
+      period: 'Août 2025 - Décembre 2025 (CDD)',
       company: 'Ecole au Sénégal (EAS)',
       position: 'Développeur Full-Stack',
       project: 'Mise en place de la platforme éducative TAGGAT MA',
@@ -24,8 +62,8 @@ const Experience = () => {
       ]
     },
     {
-      id: 1,
-      period: 'Août 2025',
+      id: 3,
+      period: 'Juin 2025 - Août 2025 (Stage)',
       company: 'Xarala',
       position: 'Développeur Full-Stack',
       project: 'Une solution fintech d\'avance sur salaire composée de trois composants principaux : 1. Application mobile pour les employés 2. Application web pour les entreprises 3. Application web pour l\'administration de la plateforme',
@@ -40,8 +78,8 @@ const Experience = () => {
       ]
     },
     {
-      id: 2,
-      period: 'Avril 2025',
+      id: 4,
+      period: 'Avril 2025 - Juin 2025 (Stage)',
       company: 'Niane Technologie',
       position: 'Développeur Full-Stack',
       project: 'Plateforme Assemblée Nationale du Sénégal',
@@ -56,8 +94,8 @@ const Experience = () => {
       ]
     },
     {
-      id: 3,
-      period: 'Mars 2025',
+      id: 5,
+      period: 'Mars 2025 - Avril 2025 (Stage)',
       company: 'Niane Technologie',
       position: 'Développeur Full-Stack',
       project: 'The Booker\'s - Gestion de réservation',
@@ -72,9 +110,9 @@ const Experience = () => {
       ]
     },
     {
-      id: 4,
-      period: 'Décembre 2024',
-      company: 'Freelance',
+      id: 6,
+      period: 'Décembre 2024 - Janvier 2025 (Freelance)',
+      company: 'Projet académique',
       position: 'Développeur Full-Stack',
       project: 'Âllo Docteur - Gestion RDV hospitaliers',
       technologies: ['Laravel', 'Node.js', 'Cloudinary', 'MySQL'],
@@ -88,9 +126,9 @@ const Experience = () => {
       ]
     },
     {
-      id: 5,
+      id: 7,
       period: 'Octobre 2024',
-      company: 'Freelance',
+      company: 'Projet académique',
       position: 'Développeur Full-Stack',
       project: 'Réseau Social pour Tailleurs',
       technologies: ['Node.js', 'React.js', 'Prisma', 'MongoDB', 'Mongoose', 'Cloudinary', 'MySQL'],
