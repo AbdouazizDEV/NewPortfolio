@@ -15,7 +15,6 @@ const Experience = () => {
       achievements: [
         'Architecture et développement du Node.js avec Express.js',
         'Interface utilisateur responsive avec React.js et Tailwind CSS',
-        'Système de forums avec catégories et sous-catégories',
         'Optimisation SEO et performance pour une meilleure visibilité',
         'Design moderne et responsive pour tous les appareils'
       ]
@@ -56,7 +55,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 4,
+      id: 3,
       period: 'Avril 2025 - Juin 2025 (Stage)',
       company: 'Niane Technologie',
       position: 'Développeur Full-Stack',
@@ -73,7 +72,7 @@ const Experience = () => {
     },
     {
       id: 3,
-      period: 'Mars 2025 - Avril 2025 (Stage)',
+      period: 'Mars 2025',
       company: 'Niane Technologie',
       position: 'Développeur Full-Stack',
       project: 'The Booker\'s - Gestion de réservation',
@@ -89,8 +88,8 @@ const Experience = () => {
     },
     {
       id: 4,
-      period: 'Décembre 2024 - Janvier 2025 (Freelance)',
-      company: 'Projet académique',
+      period: 'Décembre 2024',
+      company: 'Freelance',
       position: 'Développeur Full-Stack',
       project: 'Âllo Docteur - Gestion RDV hospitaliers',
       technologies: ['Laravel', 'Node.js', 'Cloudinary', 'MySQL'],
@@ -104,9 +103,9 @@ const Experience = () => {
       ]
     },
     {
-      id: 5,
+      id: 6,
       period: 'Octobre 2024',
-      company: 'Projet académique',
+      company: 'Freelance',
       position: 'Développeur Full-Stack',
       project: 'Réseau Social pour Tailleurs',
       technologies: ['Node.js', 'React.js', 'Prisma', 'MongoDB', 'Mongoose', 'Cloudinary', 'MySQL'],
