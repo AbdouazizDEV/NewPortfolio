@@ -93,10 +93,12 @@ const Skills = () => {
       icon: Smartphone,
       color: 'pink',
       skills: [
-        { name: 'Flutter', level: 78, icon: '💙' },
-        { name: 'React Native', level: 75, icon: '📱' },
-        { name: 'Progressive Web Apps', level: 82, icon: '🌐' },
+        { name: 'Ionic', level: 88, icon: '⚡' },
+        { name: 'Capacitor', level: 85, icon: '🔌' },
+        { name: 'React Native', level: 87, icon: '📱' },
         { name: 'Expo', level: 90, icon: '🔴' },
+        { name: 'Flutter', level: 78, icon: '💙' },
+        { name: 'Progressive Web Apps', level: 82, icon: '🌐' },
       ]
     },
     soft: {
@@ -144,7 +146,7 @@ const Skills = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Compétences Techniques</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Une expertise complète couvrant toute la chaîne de développement web moderne
+            Une expertise complète couvrant le développement web et mobile moderne
           </p>
         </motion.div>
 

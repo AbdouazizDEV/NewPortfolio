@@ -5,6 +5,65 @@ const Experience = () => {
   const experiences = [
     {
       id: 0,
+      period: 'Mai 2026 - En cours (Freelance)',
+      company: 'Kahfi SN',
+      position: 'Développeur Full-Stack',
+      project: 'Helping Yourself (HYS) — Plateforme digitale',
+      technologies: ['Ionic', 'Angular', 'Nest.JS','ReactJS', 'TypeScript', 'Capacitor', 'SCSS'],
+      link: 'https://helping-yourself.com/', 
+      link2: 'https://bo.helping-yourself.com/',
+      link3: 'https://api.helping-yourself.com/docs/',
+      link4: 'https://res.cloudinary.com/dhivn2ahm/video/upload/v1780413497/WhatsApp_Video_2026-06-02_at_15.14.37_rpaskh.mp4',
+      linkLabel: 'Voir le site web',
+      linkLabel2: 'Voir le back-office',
+      linkLabel3: 'Voir la documentation API',
+      linkLabel4: 'Voir la démo vidéo app Mobile',
+      description: 'Helping Yourself (HYS) est une plateforme digitale unifiée, disponible en version Web et Mobile (hybride), dont le fonctionnement s\'inspire d\'un système bancaire digital. Elle centralise des services d\'accompagnement dans de multiples domaines stratégiques, accessibles depuis une seule application avec un système de paiement unifié et un suivi en temps réel des demandes.',
+      achievements: [
+        'Architecture et développement du backend avec Nest.JS',
+        'Interface utilisateur moderne avec ReactJS et Angular',
+        'Optimisation des performances et sécurité renforcée',
+        'Intégration avec les systèmes gouvernementaux existants',
+        'Gestion des permissions et des rôles',
+        'Gestion des projets',
+      ]
+    },
+    {
+      id: 1,
+      period: 'Mai 2026 - En cours (Freelance)',
+      company: 'DIZIGROUP',
+      position: 'Développeur Full-Stack',
+      project: 'Application Mobile Quizz+ - DiziGroup',
+      technologies: ['ReactNative','ReactJS', 'TypeScript', 'Expo','Node.js', 'Express.js', 'Tailwind CSS'],
+      link: 'https://res.cloudinary.com/dhivn2ahm/video/upload/v1780414312/WhatsApp_Video_2026-06-02_at_15.15.12_tsutdv.mp4',
+      linkLabel: 'Voir la démo vidéo',
+      description: 'Développement de l\'application mobile Quizz+ pour DiziGroup, avec React Native et Expo.',
+      achievements: [
+        'Développement de l\'application avec React Native et Expo',
+        'Application déployable sur iOS et Android via Expo',
+        'Interface adaptée au contexte de la formation',
+        'Livrable présenté avec une vidéo de démonstration de l\'application'
+      ]
+    },
+    {
+      id: 2,
+      period: 'Avril 2026 - En cours (Freelance)',
+      company: 'Jant Tech',
+      position: 'Développeur Mobile',
+      project: 'La Cuisine de Maman — Application mobile pour un restaurant',
+      technologies: ['Ionic', 'Angular', 'TypeScript', 'Capacitor', 'SCSS'],
+      link: 'https://res.cloudinary.com/dhivn2ahm/video/upload/v1775995317/WhatsApp_Video_2026-04-12_at_11.59.07_yiuhky.mp4',
+      linkLabel: 'Voir la démo vidéo',
+      description: 'Contrat freelance avec Jant Tech : conception et développement de l\'application mobile « La Cuisine de Maman » pour un restaurant, avec Ionic (interface orientée métier restauration et expérience utilisateur fluide sur mobile).',
+      achievements: [
+        'Développement de l\'application avec Ionic et stack web moderne (Angular, TypeScript)',
+        'Application déployable sur iOS et Android via Capacitor',
+        'Interface adaptée au contexte restaurant et aux usages terrain',
+        'Livrable présenté avec une vidéo de démonstration de l\'application'
+      ]
+    },
+    {
+      id: 3,
       period: 'Janvier 2026 - Février 2026 (Freelance)',
       company: 'Freelance',
       position: 'Développeur Full-Stack',
@@ -20,7 +79,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 1,
+      id: 4,
       period: 'Août 2025 - Décembre 2025 (CDD)',
       company: 'Ecole au Sénégal (EAS)',
       position: 'Développeur Full-Stack',
@@ -39,7 +98,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 2,
+      id: 5,
       period: 'Juin 2025 - Août 2025 (Stage)',
       company: 'Xarala',
       position: 'Développeur Full-Stack',
@@ -55,7 +114,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 3,
+      id: 6,
       period: 'Avril 2025 - Juin 2025 (Stage)',
       company: 'Niane Technologie',
       position: 'Développeur Full-Stack',
@@ -71,7 +130,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 3,
+      id: 7,
       period: 'Mars 2025',
       company: 'Niane Technologie',
       position: 'Développeur Full-Stack',
@@ -87,7 +146,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 4,
+      id: 8,
       period: 'Décembre 2024',
       company: 'Freelance',
       position: 'Développeur Full-Stack',
@@ -103,7 +162,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 6,
+      id: 9,
       period: 'Octobre 2024',
       company: 'Freelance',
       position: 'Développeur Full-Stack',
@@ -219,7 +278,7 @@ const Experience = () => {
                           className="flex items-center px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors"
                         >
                           <ExternalLink size={16} className="mr-2" />
-                          Voir le projet
+                          {(exp as { linkLabel?: string }).linkLabel ?? 'Voir le projet'}
                         </motion.a>
                       )}
                       {exp.github && (

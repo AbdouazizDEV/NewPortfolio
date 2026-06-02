@@ -7,25 +7,44 @@ const Projects = () => {
 
   const projects = [
     {
-      id: 0,
-      title: 'TAGGAT MA',
-      description: 'Plateforme éducative TAGGAT MA, avec gestion des élèves, des cours, des professeurs et des documents officiels.',
-      image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1761196405/taggat_MA_tmujxx.jpg',
-      technologies: ['Laravel 12', 'Angular 19', 'Mysql','Redis','Vue.js','Swagger','GitLab'],
-      category: 'web',
-      link: 'https://web-eas.taggatma.com/',
-      link2: 'https://api-eas.taggatma.com/api/documentation#',
+      id: 12,
+      title: 'La Cuisine de Maman',
+      description: 'Application mobile Ionic pour un restaurant (client Jant Tech) : expérience utilisateur adaptée au métier de la restauration.',
+      image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1775995572/Rectangle_2040_tc1z61.png',
+      technologies: ['Ionic', 'Angular', 'TypeScript', 'Capacitor', 'SCSS'],
+      category: 'mobile',
+      link: 'https://res.cloudinary.com/dhivn2ahm/video/upload/v1775995317/WhatsApp_Video_2026-04-12_at_11.59.07_yiuhky.mp4',
+      linkLabel: 'Voir la démo vidéo',
       github: null,
       featured: true
     },
     {
-      id: 1,
-      title: 'Credex FINTRA',
-      description: 'Plateforme fintech d\'avance sur salaire composée de trois composants principaux : 1. Application mobile pour les employés 2. Application web pour les entreprises 3. Application web pour l\'administration de la plateforme',
-      image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1761196204/logoColore_u3qdsk.png',
-      technologies: ['React Native','Expo','Next.JS', 'Nest.JS', 'Mysql','GitLab','Tailwind CSS'],
+      id: 13,
+      title: 'Quizz+',
+      description: 'Application mobile React Native pour un restaurant (client DiziGroup) : expérience utilisateur adaptée au métier de la restauration.',
+      image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1780414790/logo_zxivqy.png',
+      technologies: ['ReactNative','ReactJS', 'TypeScript', 'Expo','Node.js', 'Express.js', 'Tailwind CSS'],
       category: 'mobile',
-      link: null,
+      link: 'https://res.cloudinary.com/dhivn2ahm/video/upload/v1780414312/WhatsApp_Video_2026-06-02_at_15.15.12_tsutdv.mp4',
+      linkLabel: 'Voir la démo vidéo',
+      github: null,
+      featured: true
+    },
+    {
+      id: 14,
+      title: 'Helping Yourself',
+      description: 'Plateforme digitale unifiée, disponible en version Web et Mobile (hybride), dont le fonctionnement s\'inspire d\'un système bancaire digital. Elle centralise des services d\'accompagnement dans de multiples domaines stratégiques, accessibles depuis une seule application avec un système de paiement unifié et un suivi en temps réel des demandes.',
+      image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1780414855/icon_mm53ui.png',
+      technologies: ['Ionic', 'Angular', 'Nest.JS','ReactJS', 'TypeScript', 'Capacitor', 'SCSS'],
+      category: 'mobile',
+      link: 'https://helping-yourself.com/',
+      link2: 'https://bo.helping-yourself.com/',
+      link3: 'https://api.helping-yourself.com/docs/',
+      link4: 'https://res.cloudinary.com/dhivn2ahm/video/upload/v1780413497/WhatsApp_Video_2026-06-02_at_15.14.37_rpaskh.mp4',
+      linkLabel: 'Voir le site web',
+      linkLabel2: 'Voir le back-office',
+      linkLabel3: 'Voir la documentation API',
+      linkLabel4: 'Voir la démo vidéo app Mobile',
       github: null,
       featured: true
     },
@@ -127,7 +146,18 @@ const Projects = () => {
       link: 'https://agence-de-voyage-front-tptc.vercel.app/',
       github: 'https://github.com/AbdouazizDEV/Agence_de_Voyage_front',
       featured: false
-    }
+    },
+    {
+      id:11,
+      title: 'Forum des Territoires',
+      description: 'Une plateforme stratégique de dialogue, d\'investissement et de coopération décentralisée',
+      image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1770471490/partener_ddnssj.png',
+      technologies: [ 'Node.js', 'Express.js', 'React.js', 'Tailwind CSS'],
+      category: 'web',
+      link: 'https://forumdesterritoires.com/',
+      github: 'https://github.com/AbdouazizDEV/Forum-des-territoires',
+      featured: true
+    },
   ];
 
   const filters = [
@@ -150,6 +180,7 @@ const Projects = () => {
       'Laravel 12': 'bg-emerald-100 text-emerald-700',
       'React.js': 'bg-blue-100 text-blue-700',
       'Node.js': 'bg-green-100 text-green-700',
+      'Angular': 'bg-red-100 text-red-700',
       'Angular 18': 'bg-red-100 text-red-700',
       'Angular 19': 'bg-emerald-100 text-emerald-700',
       'PostgreSQL': 'bg-blue-100 text-blue-700',
@@ -166,6 +197,10 @@ const Projects = () => {
       'Swagger': 'bg-yellow-100 text-yellow-700',
       'Expo': 'bg-emerald-100 text-emerald-700',
       'React Native': 'bg-emerald-100 text-emerald-700',
+      'Ionic': 'bg-blue-100 text-indigo-700',
+      'Capacitor': 'bg-cyan-100 text-blue-800',
+      'SCSS': 'bg-pink-100 text-pink-800',
+      'TypeScript': 'bg-blue-100 text-blue-800',
       'Vue.js': 'bg-blue-100 text-blue-700',
       'Github': 'bg-purple-100 text-purple-700',
       'Prisma ORM': 'bg-purple-100 text-purple-700',
@@ -290,7 +325,7 @@ const Projects = () => {
                         className="flex-1 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-4 py-2 rounded-lg flex items-center justify-center hover:shadow-lg transition-all duration-200"
                       >
                         <ExternalLink size={16} className="mr-2" />
-                        Voir le projet
+                        {(project as { linkLabel?: string }).linkLabel ?? 'Voir le projet'}
                       </motion.a>
                     )}
                     
