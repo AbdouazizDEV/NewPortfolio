@@ -9,7 +9,7 @@ const Projects = () => {
     {
       id: 12,
       title: 'La Cuisine de Maman',
-      description: 'Application mobile Ionic pour un restaurant (client Jant Tech) : expérience utilisateur adaptée au métier de la restauration.',
+      description: 'Application mobile Ionic pour un restaurant, réalisée chez Jant Tech aux côtés de Jant-couvoir et Let\'s GO.',
       image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1775995572/Rectangle_2040_tc1z61.png',
       technologies: ['Ionic', 'Angular', 'TypeScript', 'Capacitor', 'SCSS'],
       category: 'mobile',
@@ -21,12 +21,14 @@ const Projects = () => {
     {
       id: 13,
       title: 'Quizz+',
-      description: 'Application mobile React Native pour un restaurant (client DiziGroup) : expérience utilisateur adaptée au métier de la restauration.',
+      description: 'Application mobile et site web Quizz+, réalisés chez DIZIGROUP avec React Native, Expo et React.',
       image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1780414790/logo_zxivqy.png',
-      technologies: ['ReactNative','ReactJS', 'TypeScript', 'Expo','Node.js', 'Express.js', 'Tailwind CSS'],
+      technologies: ['React Native', 'React.js', 'TypeScript', 'Expo', 'Node.js', 'Express.js', 'Tailwind CSS'],
       category: 'mobile',
       link: 'https://res.cloudinary.com/dhivn2ahm/video/upload/v1780414312/WhatsApp_Video_2026-06-02_at_15.15.12_tsutdv.mp4',
+      link2: 'https://quizzp.com/',
       linkLabel: 'Voir la démo vidéo',
+      linkLabel2: 'Voir le site web',
       github: null,
       featured: true
     },
@@ -47,7 +49,7 @@ const Projects = () => {
       linkLabel4: 'Voir la démo vidéo app Mobile',
       github: null,
       featured: true
-    },
+    }, 
     {
       id: 2,
       title: 'Assemblée Nationale du Sénégal',
@@ -215,19 +217,19 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-slate-50 to-emerald-50">
+    <section id="projects" className="py-24 bg-[#f7f5f0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.6 }}
+          className="mb-14 max-w-2xl"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Mes Projets</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Une sélection de projets représentant mon expertise et ma passion pour le développement
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-800 mb-3">Réalisations</p>
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#14241c]">Projets</h2>
+          <p className="mt-4 text-lg text-stone-600 leading-relaxed">
+            Applications mobiles, plateformes web et outils métier livrés pour des entreprises et des institutions.
           </p>
         </motion.div>
 
@@ -246,8 +248,8 @@ const Projects = () => {
               whileTap={{ scale: 0.95 }}
               className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 activeFilter === filter.key
-                  ? 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-white shadow-lg'
-                  : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
+                  ? 'bg-emerald-800 text-white'
+                  : 'bg-white text-stone-600 hover:bg-stone-50 border border-stone-200'
               }`}
             >
               <Filter size={16} className="mr-2" />
@@ -264,7 +266,7 @@ const Projects = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 items-start gap-4 md:grid-cols-2 lg:grid-cols-3"
           >
             {filteredProjects.map((project, index) => (
               <motion.div
@@ -272,37 +274,35 @@ const Projects = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+                whileHover={{ y: -4 }}
+                className="group overflow-hidden rounded-2xl border border-stone-200 bg-white"
               >
-                {/* Project Image */}
-                <div className="relative overflow-hidden h-48">
+                <div className="relative h-36 overflow-hidden bg-[#10261c]">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="h-full w-full object-contain p-5 transition duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
                   {project.featured && (
-                    <div className="absolute top-4 left-4 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <div className="absolute top-4 left-4 rounded-full bg-emerald-800 px-3 py-1 text-sm font-medium text-white">
                       ⭐ Projet Phare
                     </div>
                   )}
                 </div>
 
                 {/* Project Content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
+                <div className="p-4">
+                  <h3 className="mb-2 text-lg font-semibold tracking-tight text-[#14241c] group-hover:text-emerald-800">
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="mb-3 line-clamp-3 text-sm leading-6 text-stone-600">
                     {project.description}
                   </p>
 
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="mb-3 flex flex-wrap gap-1.5">
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
@@ -314,33 +314,43 @@ const Projects = () => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-3">
-                    {project.link && (
-                      <motion.a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex-1 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-4 py-2 rounded-lg flex items-center justify-center hover:shadow-lg transition-all duration-200"
-                      >
-                        <ExternalLink size={16} className="mr-2" />
-                        {(project as { linkLabel?: string }).linkLabel ?? 'Voir le projet'}
-                      </motion.a>
-                    )}
-                    
-                    {project.github && (
-                      <motion.a
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      project.link ? { href: project.link, label: (project as { linkLabel?: string }).linkLabel ?? 'Voir le projet' } : null,
+                      (project as { link2?: string; linkLabel2?: string }).link2
+                        ? { href: (project as { link2: string }).link2, label: (project as { linkLabel2?: string }).linkLabel2 ?? 'Lien' }
+                        : null,
+                      (project as { link3?: string; linkLabel3?: string }).link3
+                        ? { href: (project as { link3: string }).link3, label: (project as { linkLabel3?: string }).linkLabel3 ?? 'Lien' }
+                        : null,
+                      (project as { link4?: string; linkLabel4?: string }).link4
+                        ? { href: (project as { link4: string }).link4, label: (project as { linkLabel4?: string }).linkLabel4 ?? 'Lien' }
+                        : null,
+                    ]
+                      .filter((item): item is { href: string; label: string } => Boolean(item))
+                      .map((item) => (
+                        <a
+                          key={item.href}
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center rounded-full bg-emerald-800 px-3 py-2 text-xs font-medium text-white transition hover:bg-emerald-900"
+                        >
+                          <ExternalLink size={14} className="mr-1.5" />
+                          {item.label}
+                        </a>
+                      ))}
+
+                    {project.github && project.github !== '#' && (
+                      <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className={`${project.link ? 'px-4' : 'flex-1 px-4'} py-2 border border-gray-300 text-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-50 transition-all duration-200`}
+                        className="inline-flex items-center rounded-full border border-stone-300 px-3 py-2 text-xs font-medium text-stone-700 transition hover:bg-stone-50"
                       >
-                        <Github size={16} className={project.link ? '' : 'mr-2'} />
-                        {!project.link && 'Code source'}
-                      </motion.a>
+                        <Github size={14} className="mr-1.5" />
+                        Code source
+                      </a>
                     )}
                   </div>
                 </div>
@@ -357,7 +367,7 @@ const Projects = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mt-16 text-center"
         >
-          <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 p-8 rounded-2xl text-white">
+          <div className="rounded-3xl bg-emerald-900 p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">Intéressé par mon travail ?</h3>
             <p className="text-emerald-100 mb-6 max-w-2xl mx-auto">
               Je suis toujours ouvert à de nouveaux défis et collaborations. 
@@ -370,7 +380,7 @@ const Projects = () => {
                 const element = document.querySelector('#contact');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-white text-emerald-600 px-8 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-200"
+              className="rounded-full bg-white px-8 py-3 font-medium text-emerald-900 transition hover:bg-emerald-50"
             >
               Discutons de votre projet
             </motion.button>

@@ -6,107 +6,118 @@ const Education = () => {
   const education = [
     {
       id: 1,
-      period: '2022 - 2025',
+      period: 'Février 2026 – En cours',
       institution: 'UCAD-FST',
-      degree: 'Licence en Mathématiques et Informatique',
+      degree: 'Licence 3 Mathématiques et Informatique',
       location: 'Dakar, Sénégal',
-      description: 'Formation complète couvrant les mathématiques appliquées, l\'algorithmique, la programmation et les systèmes informatiques.',
+      description: 'Troisième année de licence, en parallèle de missions de développement web et mobile.',
       highlights: [
-        'Algorithmique et structures de données',
-        'Mathématiques appliquées à l\'informatique',
-        'Programmation orientée objet',
+        'Approfondissement en informatique',
+        'Projets appliqués au développement logiciel',
         'Bases de données et systèmes'
       ]
     },
     {
       id: 2,
-      period: '2024',
-      institution: 'Sonatel Academy',
-      degree: 'Formation Développement Web et Mobile',
+      period: 'Décembre 2025',
+      institution: 'UCAD-FST',
+      degree: 'Licence 2 Mathématiques et Informatique',
       location: 'Dakar, Sénégal',
-      description: 'Formation intensive axée sur les technologies modernes de développement web et mobile.',
+      description: 'Deuxième année de licence en mathématiques et informatique.',
       highlights: [
-        'Développement web full-stack',
-        'Technologies mobiles',
-        'Projets pratiques en entreprise',
-        'Méthodologies agiles'
+        'Algorithmique et structures de données',
+        'Programmation et systèmes',
+        'Mathématiques appliquées'
       ]
     },
     {
       id: 3,
-      period: '2023',
-      institution: 'SunuCode',
-      degree: 'Certificat en Développement Web',
+      period: 'Février 2024 – Novembre 2024',
+      institution: 'Sonatel Academy',
+      degree: 'Développement web et mobile',
       location: 'Dakar, Sénégal',
-      description: 'Programme pratique de développement web avec focus sur les technologies frontend et backend.',
+      description: 'Formation au développement web et mobile, complétée par un certificat Sonatel Academy.',
       highlights: [
-        'HTML, CSS, JavaScript avancé',
-        'Frameworks frontend modernes',
-        'Développement backend',
-        'Projets portfolio'
+        'Développement web full-stack',
+        'Applications mobiles',
+        'Projets pratiques'
+      ]
+    },
+    {
+      id: 4,
+      period: 'Juillet 2023 – Décembre 2023',
+      institution: 'SunuCode',
+      degree: 'Développement web',
+      location: 'Dakar, Sénégal',
+      description: 'Parcours pratique de développement web, du frontend au backend.',
+      highlights: [
+        'HTML, CSS et JavaScript',
+        'Interfaces et APIs',
+        'Certificat en développement web'
+      ]
+    },
+    {
+      id: 5,
+      period: 'Novembre 2022 – Juin 2023',
+      institution: 'UCAD-FST',
+      degree: 'Licence 1 Mathématiques et Informatique',
+      location: 'Dakar, Sénégal',
+      description: 'Première année de licence en mathématiques et informatique.',
+      highlights: [
+        'Fondamentaux mathématiques',
+        'Initiation à l\'informatique',
+        'Algorithmique'
       ]
     }
   ];
 
   const certifications = [
     {
+      title: 'Développement web et mobile',
+      issuer: 'Sonatel Academy',
+      date: '2024',
+      icon: '📱'
+    },
+    {
       title: 'Introduction to Relational Database and SQL',
       issuer: 'Coursera',
       date: '2024',
-      icon: '🗄️',
-      link: 'https://www.coursera.org/account/accomplishments/verify/2234567890'
+      icon: '🗄️'
     },
     {
-      title: 'APIs in Node.js RESTful Backend',
+      title: 'APIs in Node.js : Write a RESTful API Backend Application',
       issuer: 'Coursera',
       date: '2024',
-      icon: '🔗',
-      link: 'https://www.coursera.org/account/accomplishments/verify/2234567890'
+      icon: '🔗'
     },
     {
-      title: 'Certificat Développement Web',
+      title: 'Certificat en développement web',
       issuer: 'SunuCode',
       date: '2023',
-      icon: '💻',
-      link: '#'
+      icon: '💻'
     },
     {
-      title: 'Intelligence Artificielle',
-      issuer: 'FORCE-N',
+      title: 'Certificat en Intelligence Artificielle',
+      issuer: 'Programme FORCE-N',
       date: '2023',
-      icon: '🤖',
-      link: '#'
-    },
-    {
-      title: 'Web3 and Blockchain',
-      issuer: 'FORCE-N',
-      date: '2023',
-      icon: '🕸️',
-      link: '#'
-    },
-    {
-      title: 'L\'essentiel sur Flutter pour le développement mobile',
-      issuer: 'LinkedIn Learning',
-      date: '2023',
-      icon: '🛠️',
-      link: '#'
+      icon: '🤖'
     }
   ];
 
   return (
-    <section id="education" className="py-20 bg-white">
+    <section id="education" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.6 }}
+          className="mb-14 max-w-2xl"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Formation & Certifications</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Un parcours académique solide complété par une formation continue en technologies modernes
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-800 mb-3">Parcours</p>
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#14241c]">Formation et certifications</h2>
+          <p className="mt-4 text-lg text-stone-600 leading-relaxed">
+            Licence de mathématiques et informatique à l'UCAD-FST, complétée par Sonatel Academy, SunuCode et des certificats en ligne.
           </p>
         </motion.div>
 
@@ -144,7 +155,7 @@ const Education = () => {
                     <div className="ml-16">
                       <motion.div
                         whileHover={{ scale: 1.02, y: -5 }}
-                        className="bg-gradient-to-r from-emerald-50 to-blue-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                        className="rounded-3xl border border-stone-200/80 bg-[#f7f5f0] p-6 transition-all duration-300"
                       >
                         <div className="flex items-center text-emerald-600 font-medium mb-2">
                           <Calendar size={16} className="mr-2" />
@@ -199,7 +210,7 @@ const Education = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ scale: 1.03, y: -3 }}
-                  className="bg-white border border-gray-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="rounded-3xl border border-stone-200 bg-white p-6 transition-all duration-300"
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex items-start space-x-4">
@@ -213,14 +224,18 @@ const Education = () => {
                         </div>
                       </div>
                     </div>
-                    <motion.a
-                      href={cert.link}
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="p-2 text-gray-400 hover:text-emerald-600 transition-colors"
-                    >
-                      <ExternalLink size={18} />
-                    </motion.a>
+                    {'link' in cert && cert.link ? (
+                      <motion.a
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        className="p-2 text-gray-400 hover:text-emerald-800 transition-colors"
+                      >
+                        <ExternalLink size={18} />
+                      </motion.a>
+                    ) : null}
                   </div>
                 </motion.div>
               ))}
@@ -232,10 +247,10 @@ const Education = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="mt-8 p-6 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-xl text-white"
+              className="mt-8 rounded-3xl bg-emerald-900 p-6 text-white"
             >
               <h4 className="font-bold text-lg mb-3">🎯 Formation Continue</h4>
-              <p className="text-emerald-100 leading-relaxed">
+              <p className="text-emerald-100/90 leading-relaxed">
                 Je crois fermement en l'apprentissage continu. Chaque semaine, je consacre du temps 
                 à explorer de nouvelles technologies, suivre des cours en ligne, et participer à des 
                 webinaires pour rester à jour avec les dernières innovations du secteur.

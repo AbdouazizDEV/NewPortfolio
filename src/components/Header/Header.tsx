@@ -20,6 +20,7 @@ const Header = () => {
     { name: 'Expériences', href: '#experience' },
     { name: 'Compétences', href: '#skills' },
     { name: 'Projets', href: '#projects' },
+    { name: 'Formation', href: '#education' },
     { name: 'Contact', href: '#contact' }
   ];
 
@@ -33,7 +34,7 @@ const Header = () => {
 
   const downloadCV = () => {
     // URL externe vers votre CV (remplacez par votre vraie URL)
-    const cvUrl = 'https://drive.google.com/file/d/1PSnbZWIrNMRMa18sS9tlQNlU9KqmevZp/view?usp=sharing';
+    const cvUrl = 'https://drive.google.com/file/d/19aM9FZuYZdWRJ1NUaQWs2LxrIVEd3YCF/view?usp=sharing';
     
     // Créer un lien temporaire pour télécharger le CV
     const link = document.createElement('a');
@@ -62,10 +63,10 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
-              AD
+            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-800 text-sm font-bold text-white">
+              AAD
             </div>
-            <span className="text-xl font-bold text-gray-800">Abdou Aziz</span>
+            <span className={`text-xl font-bold ${isScrolled ? 'text-gray-800' : 'text-white'}`}>Abdou Aziz</span>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -75,7 +76,7 @@ const Header = () => {
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
                 whileHover={{ y: -2 }}
-                className="text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200"
+                className={`font-medium transition-colors duration-200 ${isScrolled ? 'text-gray-700 hover:text-emerald-700' : 'text-white/85 hover:text-white'}`}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -88,7 +89,7 @@ const Header = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={downloadCV}
-              className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:shadow-lg transition-all duration-200"
+              className="bg-emerald-800 text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-emerald-900 transition-all duration-200"
             >
               <Download size={16} />
               <span>CV</span>
@@ -100,7 +101,7 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100"
+            className={`md:hidden rounded-lg p-2 ${isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.button>
@@ -126,7 +127,7 @@ const Header = () => {
               ))}
               <button 
                 onClick={downloadCV}
-                className="w-full mt-4 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-4 py-2 rounded-lg flex items-center justify-center space-x-2"
+                className="w-full mt-4 bg-emerald-800 text-white px-4 py-2 rounded-full flex items-center justify-center space-x-2"
               >
                 <Download size={16} />
                 <span>Télécharger CV</span>

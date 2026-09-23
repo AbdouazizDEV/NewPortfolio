@@ -33,7 +33,7 @@ const Skills = () => {
         { name: 'Next.js', level: 88, icon: '🔗' },
         { name: 'React Native', level: 87, icon: '📱' },
         { name: 'Expo', level: 90, icon: '🔴' },
-        { name: 'Flutter', level: 85, icon: '�️' },
+        { name: 'Flutter', level: 85, icon: '💙' },
         { name: 'Dart', level: 85, icon: '🐦' },
       ]
     },
@@ -46,7 +46,7 @@ const Skills = () => {
         { name: 'Express.js', level: 85, icon: '⚡' },
         { name: 'NestJS', level: 80, icon: '🐱' },
         { name: 'PHP', level: 87, icon: '🐘' },
-        { name: 'Laravel 11', level: 90, icon: '🔴' },
+        { name: 'Laravel', level: 90, icon: '🔴' },
         { name: 'API REST', level: 92, icon: ' 🔗' },
         { name: 'Prisma ORM', level: 83, icon: '🔷' },
         { name: 'Swagger', level: 85, icon: '🔗' },
@@ -63,16 +63,9 @@ const Skills = () => {
         { name: 'MySQL', level: 90, icon: '🐬' },
         { name: 'PostgreSQL', level: 85, icon: '🐘' },
         { name: 'MongoDB', level: 82, icon: '🍃' },
-        { name: 'Mongoose', level: 80, icon: '📊' },
         { name: 'Firebase', level: 78, icon: '🔥' },
-        { name: 'Neon Postgres', level: 75, icon: '💫' },
         { name: 'Supabase', level: 85, icon: '⚡' },
-        { name: 'Prisma ORM', level: 83, icon: '🔷' },
-        { name: 'Swagger', level: 85, icon: '🔗' },
         { name: 'Redis', level: 80, icon: '🐶' },
-        { name: 'Socket.io', level: 87, icon: '🔗' },
-        { name: 'WebSocket', level: 90, icon: '🔗' },
-        { name: 'WebSocket', level: 90, icon: '🔗' },
       ]
     },
     tools: {
@@ -107,12 +100,11 @@ const Skills = () => {
       color: 'indigo',
       skills: [
         { name: 'Résolution de problèmes', level: 95, icon: '🧩' },
+        { name: 'Clean Architecture & SOLID', level: 86, icon: '🏗️' },
         { name: 'Travail en équipe', level: 90, icon: '👥' },
         { name: 'Communication', level: 88, icon: '💬' },
         { name: 'Apprentissage rapide', level: 93, icon: '📚' },
-        { name: 'Curiosité technologique', level: 98, icon: '🔍' },
-        { name: 'Adaptabilité', level: 91, icon: '🔄' },
-        { name: 'Gestion de projet', level: 90, icon: '�' },
+        { name: 'Gestion de projet', level: 90, icon: '📋' },
       ]
     }
   };
@@ -134,19 +126,19 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.6 }}
+          className="mb-14 max-w-2xl"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Compétences Techniques</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Une expertise complète couvrant le développement web et mobile moderne
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-800 mb-3">Savoir-faire</p>
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#14241c]">Compétences</h2>
+          <p className="mt-4 text-lg text-stone-600 leading-relaxed">
+            Web, mobile et API : Ionic, React, Angular, Laravel, NestJS, avec une attention portée à Clean Architecture et SOLID.
           </p>
         </motion.div>
 
@@ -222,16 +214,16 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-16 text-center"
+          className="mt-16"
         >
-          <div className="bg-gradient-to-r from-emerald-50 to-blue-50 p-8 rounded-2xl">
+          <div className="rounded-3xl border border-stone-200 bg-[#f7f5f0] p-8 text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">En Constante Évolution</h3>
             <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
               La technologie évolue rapidement, et moi aussi. Je consacre du temps régulièrement 
               à l'apprentissage de nouvelles technologies, la participation à des projets open source, 
               et la veille technologique pour rester à la pointe des innovations du développement web.
             </p>
-            <div className="flex justify-center items-center mt-6 space-x-8 text-emerald-600">
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-emerald-800">
               <div className="flex items-center">
                 <Target size={20} className="mr-2" />
                 <span className="font-medium">Orienté résultats</span>

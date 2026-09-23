@@ -115,19 +115,19 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-50 to-emerald-50">
+    <section id="contact" className="py-24 bg-[#f4f1ea]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="mb-14 max-w-2xl"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Contactez-moi</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Prêt à donner vie à votre projet ? Discutons ensemble de vos besoins et objectifs
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-800 mb-3">Échange</p>
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#14241c]">Contact</h2>
+          <p className="mt-4 text-lg text-stone-600 leading-relaxed">
+            Prêt à donner vie à votre projet ? Discutons de vos besoins et de vos objectifs.
           </p>
         </motion.div>
 
@@ -195,10 +195,18 @@ const Contact = () => {
               transition={{ delay: 0.5 }}
               className="mt-8 p-6 bg-gradient-to-r from-emerald-50 to-blue-50 rounded-xl"
             >
-              <h4 className="font-bold text-gray-900 mb-2">Référence Professionnelle</h4>
+              <h4 className="font-bold text-gray-900 mb-2">Références Professionnelles</h4>
               <p className="text-gray-600">
                 <strong>Birane Baila Wane</strong><br />
                 Téléphone : +221 77 766 95 95
+              </p>
+              <p className="mt-3 text-gray-600">
+                <strong>Cheikh Sow</strong><br />
+                Téléphone : +221 77 138 42 09
+              </p>
+              <p className="mt-3 text-gray-600">
+                <strong>Pape Mamadou DIOP</strong><br />
+                Téléphone : +33 7 84 93 41 88
               </p>
             </motion.div>
           </motion.div>

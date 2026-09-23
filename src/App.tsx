@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import SEO from './components/SEO/SEO';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
@@ -12,7 +10,7 @@ import Contact from './components/Contact/Contact';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-green-50">
+    <div className="min-h-screen bg-[#f4f1ea] text-[#14241c]">
       <SEO />
       <Header />
       <main>
