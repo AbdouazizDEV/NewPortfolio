@@ -22,6 +22,27 @@ type ExperienceItem = {
 const Experience = () => {
   const experiences: ExperienceItem[] = [
     {
+      id: 15,
+      period: 'Septembre 2026 – En cours (Freelance)',
+      company: 'SDMI',
+      position: 'Développeur Full-Stack',
+      project: 'Site catalogue de la Sénégalaise de distribution de matériels industriels',
+      technologies: ['Next.js', 'React.js', 'TypeScript', 'Tailwind CSS'],
+      links: [
+        {
+          href: 'https://sdmi-eta.vercel.app/fr',
+          label: 'Voir le site'
+        }
+      ],
+      description: 'Développement en cours du site de SDMI, distributeur de robinetterie et de matériels industriels à Dakar. Le site présente le catalogue, les secteurs d\'activité et permet de demander un devis.',
+      achievements: [
+        'Site bilingue français et anglais',
+        'Catalogue par familles : robinetterie, tuyauterie, vannes et accessoires',
+        'Recherche et filtres techniques (diamètre, pression, matière)',
+        'Parcours de demande de devis et présentation de l\'agence de Dakar'
+      ]
+    },
+    {
       id: 1,
       period: 'Mars 2026',
       company: 'DIZIGROUP',

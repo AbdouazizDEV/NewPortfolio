@@ -7,6 +7,19 @@ const Projects = () => {
 
   const projects = [
     {
+      id: 15,
+      title: 'SDMI',
+      description: 'Site vitrine et catalogue technique de la Sénégalaise de distribution de matériels industriels : familles de produits, secteurs (incendie, pétrole-gaz, agroalimentaire), recherche et demande de devis. Mission freelance en cours.',
+      image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1792396996/sdmi-logo_jvrzfc.svg',
+      imageBg: 'bg-[#f7f5f0]',
+      technologies: ['Next.js', 'React.js', 'TypeScript', 'Tailwind CSS'],
+      category: 'web',
+      link: 'https://sdmi-eta.vercel.app/fr',
+      linkLabel: 'Voir le site',
+      github: null,
+      featured: true
+    },
+    {
       id: 11,
       title: 'Kondaktor',
       description: 'Plateforme web de gestion de projets et de tâches, réalisée chez DIZIGROUP avec Angular et NestJS.',
@@ -289,7 +302,7 @@ const Projects = () => {
                 whileHover={{ y: -4 }}
                 className="group overflow-hidden rounded-2xl border border-stone-200 bg-white"
               >
-                <div className="relative h-36 overflow-hidden bg-[#10261c]">
+                <div className={`relative h-36 overflow-hidden ${(project as { imageBg?: string }).imageBg ?? 'bg-[#10261c]'}`}>
                   <img
                     src={project.image}
                     alt={project.title}
