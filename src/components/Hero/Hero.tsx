@@ -1,6 +1,30 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ArrowUpRight } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowUpRight, Layers, Waypoints } from 'lucide-react';
+import {
+  SiIonic,
+  SiCapacitor,
+  SiReact,
+  SiExpo,
+  SiAngular,
+  SiNodedotjs,
+  SiExpress,
+  SiPostman,
+  SiGithubactions,
+  SiNestjs,
+  SiLaravel,
+  SiNextdotjs,
+  SiPostgresql,
+  SiTailwindcss,
+  SiMysql,
+  SiDocker,
+  SiGit,
+  SiLinux,
+  SiDigitalocean,
+  SiTypescript,
+} from 'react-icons/si';
+import { VscVscode } from 'react-icons/vsc';
+import type { IconType } from 'react-icons';
 
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -20,7 +44,32 @@ const Hero = () => {
     }
   };
 
-  const stack = ['Ionic', 'Capacitor', 'React Native', 'Expo', 'Angular', 'NestJS', 'Laravel', 'Next.js', 'PostgreSQL', 'Architecture', 'APIs REST', 'TypeScript'];
+  const stack: { name: string; icon: IconType; color: string }[] = [
+    { name: 'Ionic', icon: SiIonic, color: '#3880FF' },
+    { name: 'Capacitor', icon: SiCapacitor, color: '#119EFF' },
+    { name: 'React Native', icon: SiReact, color: '#61DAFB' },
+    { name: 'Expo', icon: SiExpo, color: '#FFFFFF' },
+    { name: 'Angular', icon: SiAngular, color: '#DD0031' },
+    { name: 'Node.js', icon: SiNodedotjs, color: '#5FA04E' },
+    { name: 'Express.js', icon: SiExpress, color: '#FFFFFF' },
+    { name: 'React.js', icon: SiReact, color: '#61DAFB' },
+    { name: 'VS Code', icon: VscVscode, color: '#007ACC' },
+    { name: 'Postman', icon: SiPostman, color: '#FF6C37' },
+    { name: 'CI/CD', icon: SiGithubactions, color: '#2088FF' },
+    { name: 'NestJS', icon: SiNestjs, color: '#E0234E' },
+    { name: 'Laravel', icon: SiLaravel, color: '#FF2D20' },
+    { name: 'Next.js', icon: SiNextdotjs, color: '#FFFFFF' },
+    { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
+    { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
+    { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
+    { name: 'Docker', icon: SiDocker, color: '#2496ED' },
+    { name: 'Git', icon: SiGit, color: '#F05032' },
+    { name: 'Linux', icon: SiLinux, color: '#FCC624' },
+    { name: 'DigitalOcean', icon: SiDigitalocean, color: '#0080FF' },
+    { name: 'Architecture', icon: Layers, color: '#A7F3D0' },
+    { name: 'APIs REST', icon: Waypoints, color: '#A7F3D0' },
+    { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+  ];
 
   return (
     <section id="hero" className="relative overflow-hidden bg-[#07140f] text-[#f4f1ea]">
@@ -105,7 +154,7 @@ const Hero = () => {
         >
           <div className="absolute -inset-3 rounded-[2rem] bg-emerald-900/90" />
           <img
-            src="https://res.cloudinary.com/dhivn2ahm/image/upload/v1739929505/WhatsApp_Image_2024-04-29_at_17.09.21_1_-removebg-preview_bvo4sq.jpg"
+            src="https://res.cloudinary.com/dhivn2ahm/image/upload/v1792395695/Gemini_Generated_Image_csruf5csruf5csru_1_oiah8y.jpg"
             alt="Abdou Aziz Diop"
             className="relative aspect-[4/5] w-full rounded-[1.7rem] object-cover object-top"
           />
@@ -114,9 +163,16 @@ const Hero = () => {
 
       <div className="relative border-t border-white/10">
         <div className="overflow-hidden py-4">
-          <div className="marquee-track flex w-max gap-10 pr-10 text-sm font-medium uppercase tracking-[0.22em] text-emerald-100/70">
+          <div className="marquee-track flex w-max items-center gap-8 pr-8">
             {[...stack, ...stack].map((item, index) => (
-              <span key={`${item}-${index}`} className="whitespace-nowrap">{item}</span>
+              <span
+                key={`${item.name}-${index}`}
+                title={item.name}
+                aria-label={item.name}
+                className="inline-flex items-center justify-center"
+              >
+                <item.icon size={28} color={item.color} aria-hidden />
+              </span>
             ))}
           </div>
         </div>

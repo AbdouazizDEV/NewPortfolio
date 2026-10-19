@@ -10,8 +10,51 @@ import {
   Users,
   Lightbulb,
   Target,
-  Zap
+  Zap,
+  MonitorSmartphone,
+  Waypoints,
+  Radio,
+  Puzzle,
+  Layers,
+  MessageCircle,
+  BookOpen,
+  ClipboardList,
 } from 'lucide-react';
+import {
+  SiHtml5,
+  SiCss,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiAngular,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiExpo,
+  SiFlutter,
+  SiDart,
+  SiNodedotjs,
+  SiExpress,
+  SiNestjs,
+  SiPhp,
+  SiLaravel,
+  SiPrisma,
+  SiSwagger,
+  SiRedis,
+  SiSocketdotio,
+  SiMysql,
+  SiPostgresql,
+  SiMongodb,
+  SiFirebase,
+  SiSupabase,
+  SiGit,
+  SiGitlab,
+  SiGithub,
+  SiCloudinary,
+  SiDocker,
+  SiIonic,
+  SiCapacitor,
+  SiPwa,
+} from 'react-icons/si';
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState('frontend');
@@ -22,19 +65,19 @@ const Skills = () => {
       icon: Code,
       color: 'emerald',
       skills: [
-        { name: 'HTML5', level: 98, icon: '🌐' },
-        { name: 'CSS3', level: 95, icon: '🎨' },
-        { name: 'JavaScript', level: 95, icon: '⚡' },
-        { name: 'TypeScript', level: 85, icon: '📘' },
-        { name: 'React.js', level: 90, icon: '⚛️' },
-        { name: 'Angular', level: 82, icon: '🅰️' },
-        { name: 'Tailwind CSS', level: 88, icon: '💨' },
-        { name: 'Responsive Design', level: 93, icon: '📱' },
-        { name: 'Next.js', level: 88, icon: '🔗' },
-        { name: 'React Native', level: 87, icon: '📱' },
-        { name: 'Expo', level: 90, icon: '🔴' },
-        { name: 'Flutter', level: 85, icon: '💙' },
-        { name: 'Dart', level: 85, icon: '🐦' },
+        { name: 'HTML5', level: 98, icon: SiHtml5, color: '#E34F26' },
+        { name: 'CSS3', level: 95, icon: SiCss, color: '#1572B6' },
+        { name: 'JavaScript', level: 95, icon: SiJavascript, color: '#F7DF1E' },
+        { name: 'TypeScript', level: 85, icon: SiTypescript, color: '#3178C6' },
+        { name: 'React.js', level: 90, icon: SiReact, color: '#61DAFB' },
+        { name: 'Angular', level: 82, icon: SiAngular, color: '#DD0031' },
+        { name: 'Tailwind CSS', level: 88, icon: SiTailwindcss, color: '#06B6D4' },
+        { name: 'Responsive Design', level: 93, icon: MonitorSmartphone, color: '#047857' },
+        { name: 'Next.js', level: 88, icon: SiNextdotjs, color: '#111827' },
+        { name: 'React Native', level: 87, icon: SiReact, color: '#61DAFB' },
+        { name: 'Expo', level: 90, icon: SiExpo, color: '#000000' },
+        { name: 'Flutter', level: 85, icon: SiFlutter, color: '#02569B' },
+        { name: 'Dart', level: 85, icon: SiDart, color: '#0175C2' },
       ]
     },
     backend: {
@@ -42,17 +85,17 @@ const Skills = () => {
       icon: Server,
       color: 'blue',
       skills: [
-        { name: 'Node.js', level: 88, icon: '💚' },
-        { name: 'Express.js', level: 85, icon: '⚡' },
-        { name: 'NestJS', level: 80, icon: '🐱' },
-        { name: 'PHP', level: 87, icon: '🐘' },
-        { name: 'Laravel', level: 90, icon: '🔴' },
-        { name: 'API REST', level: 92, icon: ' 🔗' },
-        { name: 'Prisma ORM', level: 83, icon: '🔷' },
-        { name: 'Swagger', level: 85, icon: '🔗' },
-        { name: 'Redis', level: 80, icon: '🐶' },
-        { name: 'Socket.io', level: 87, icon: '🔗' },
-        { name: 'WebSocket', level: 90, icon: '🔗' }
+        { name: 'Node.js', level: 88, icon: SiNodedotjs, color: '#5FA04E' },
+        { name: 'Express.js', level: 85, icon: SiExpress, color: '#000000' },
+        { name: 'NestJS', level: 80, icon: SiNestjs, color: '#E0234E' },
+        { name: 'PHP', level: 87, icon: SiPhp, color: '#777BB4' },
+        { name: 'Laravel', level: 90, icon: SiLaravel, color: '#FF2D20' },
+        { name: 'API REST', level: 92, icon: Waypoints, color: '#047857' },
+        { name: 'Prisma ORM', level: 83, icon: SiPrisma, color: '#2D3748' },
+        { name: 'Swagger', level: 85, icon: SiSwagger, color: '#85EA2D' },
+        { name: 'Redis', level: 80, icon: SiRedis, color: '#FF4438' },
+        { name: 'Socket.io', level: 87, icon: SiSocketdotio, color: '#010101' },
+        { name: 'WebSocket', level: 90, icon: Radio, color: '#047857' },
       ]
     },
     database: {
@@ -60,12 +103,12 @@ const Skills = () => {
       icon: Database,
       color: 'purple',
       skills: [
-        { name: 'MySQL', level: 90, icon: '🐬' },
-        { name: 'PostgreSQL', level: 85, icon: '🐘' },
-        { name: 'MongoDB', level: 82, icon: '🍃' },
-        { name: 'Firebase', level: 78, icon: '🔥' },
-        { name: 'Supabase', level: 85, icon: '⚡' },
-        { name: 'Redis', level: 80, icon: '🐶' },
+        { name: 'MySQL', level: 90, icon: SiMysql, color: '#4479A1' },
+        { name: 'PostgreSQL', level: 85, icon: SiPostgresql, color: '#4169E1' },
+        { name: 'MongoDB', level: 82, icon: SiMongodb, color: '#47A248' },
+        { name: 'Firebase', level: 78, icon: SiFirebase, color: '#DD2C00' },
+        { name: 'Supabase', level: 85, icon: SiSupabase, color: '#3FCF8E' },
+        { name: 'Redis', level: 80, icon: SiRedis, color: '#FF4438' },
       ]
     },
     tools: {
@@ -73,12 +116,12 @@ const Skills = () => {
       icon: Settings,
       color: 'orange',
       skills: [
-        { name: 'Git', level: 90, icon: '📚' },
-        { name: 'GitLab', level: 88, icon: '🦊' },
-        { name: 'GitHub', level: 92, icon: '🐙' },
-        { name: 'Cloudinary', level: 85, icon: '☁️' },
-        { name: 'LWS', level: 80, icon: '🚀' },
-        { name: 'Docker', level: 75, icon: '🐳' },
+        { name: 'Git', level: 90, icon: SiGit, color: '#F05032' },
+        { name: 'GitLab', level: 88, icon: SiGitlab, color: '#FC6D26' },
+        { name: 'GitHub', level: 92, icon: SiGithub, color: '#181717' },
+        { name: 'Cloudinary', level: 85, icon: SiCloudinary, color: '#3448C5' },
+        { name: 'LWS', level: 80, icon: Server, color: '#047857' },
+        { name: 'Docker', level: 75, icon: SiDocker, color: '#2496ED' },
       ]
     },
     mobile: {
@@ -86,12 +129,12 @@ const Skills = () => {
       icon: Smartphone,
       color: 'pink',
       skills: [
-        { name: 'Ionic', level: 88, icon: '⚡' },
-        { name: 'Capacitor', level: 85, icon: '🔌' },
-        { name: 'React Native', level: 87, icon: '📱' },
-        { name: 'Expo', level: 90, icon: '🔴' },
-        { name: 'Flutter', level: 78, icon: '💙' },
-        { name: 'Progressive Web Apps', level: 82, icon: '🌐' },
+        { name: 'Ionic', level: 88, icon: SiIonic, color: '#3880FF' },
+        { name: 'Capacitor', level: 85, icon: SiCapacitor, color: '#119EFF' },
+        { name: 'React Native', level: 87, icon: SiReact, color: '#61DAFB' },
+        { name: 'Expo', level: 90, icon: SiExpo, color: '#000000' },
+        { name: 'Flutter', level: 78, icon: SiFlutter, color: '#02569B' },
+        { name: 'Progressive Web Apps', level: 82, icon: SiPwa, color: '#5A0FC8' },
       ]
     },
     soft: {
@@ -99,12 +142,12 @@ const Skills = () => {
       icon: Brain,
       color: 'indigo',
       skills: [
-        { name: 'Résolution de problèmes', level: 95, icon: '🧩' },
-        { name: 'Clean Architecture & SOLID', level: 86, icon: '🏗️' },
-        { name: 'Travail en équipe', level: 90, icon: '👥' },
-        { name: 'Communication', level: 88, icon: '💬' },
-        { name: 'Apprentissage rapide', level: 93, icon: '📚' },
-        { name: 'Gestion de projet', level: 90, icon: '📋' },
+        { name: 'Résolution de problèmes', level: 95, icon: Puzzle, color: '#047857' },
+        { name: 'Clean Architecture & SOLID', level: 86, icon: Layers, color: '#047857' },
+        { name: 'Travail en équipe', level: 90, icon: Users, color: '#047857' },
+        { name: 'Communication', level: 88, icon: MessageCircle, color: '#047857' },
+        { name: 'Apprentissage rapide', level: 93, icon: BookOpen, color: '#047857' },
+        { name: 'Gestion de projet', level: 90, icon: ClipboardList, color: '#047857' },
       ]
     }
   };
@@ -189,7 +232,7 @@ const Skills = () => {
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
-                    <span className="text-2xl mr-3">{skill.icon}</span>
+                    <skill.icon size={22} color={skill.color} className="mr-3 shrink-0" aria-hidden />
                     <h3 className="font-semibold text-gray-900">{skill.name}</h3>
                   </div>
                   <span className="text-emerald-600 font-bold">{skill.level}%</span>

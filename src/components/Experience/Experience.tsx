@@ -22,11 +22,11 @@ type ExperienceItem = {
 const Experience = () => {
   const experiences: ExperienceItem[] = [
     {
-      id: 0,
-      period: 'Mars 2026 – En cours',
+      id: 1,
+      period: 'Mars 2026',
       company: 'DIZIGROUP',
-      position: 'Responsable technique',
-      project: 'Pilotage technique et application mobile Quizz+',
+      position: 'Développeur Full-Stack & Responsable technique',
+      project: 'Pilotage technique et développement de la plateforme Quizz+',
       technologies: ['React Native', 'Expo', 'React.js', 'TypeScript', 'Node.js', 'Express.js', 'Tailwind CSS'],
       links: [
         {
@@ -47,7 +47,28 @@ const Experience = () => {
       ]
     },
     {
-      id: 1,
+      id: 0,
+      period: 'Août 2026 - En cours',
+      company: 'DIZIGROUP',
+      position: 'Développeur Full-Stack & Responsable technique',
+      project: 'Pilotage technique et développement de la plateforme web Kondaktor ',
+      technologies: ['Angular', 'NestJS', 'TypeScript', 'Tailwind CSS', 'PostgreSQL'],
+      links: [
+        {
+          href: 'https://kondaktor.com/',
+          label: 'Voir le site web'
+        }
+      ],
+      description: 'Pilotage technique et développement de la plateforme web Kondaktor, une plateforme de gestion de projets et de tâches.',
+      achievements: [
+        'Cadrage de l\'architecture et suivi de la qualité des livrables',
+        'Encadrement des équipes de développement',
+        'Application Kondaktor en Angular et NestJS',
+        'Site web Kondaktor en Angular et Tailwind CSS'
+      ]
+    },
+    {
+      id: 2,
       period: 'Avril 2026 – Juin 2026 (Freelance)',
       company: 'Jant Tech',
       position: 'Développeur Mobile',
@@ -68,7 +89,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 2,
+      id: 3,
       period: 'Mai 2026 (Freelance)',
       company: 'Kahfi SN',
       position: 'Développeur Full-Stack',
@@ -92,7 +113,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 3,
+      id: 4,
       period: 'Février 2026 (Freelance)',
       company: 'Freelance',
       position: 'Développeur Full-Stack',
@@ -108,7 +129,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 4,
+      id: 5,
       period: 'Septembre 2025 – Novembre 2025 (CDD)',
       company: 'École au Sénégal (EAS)',
       position: 'Développeur Full-Stack',
@@ -127,7 +148,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 5,
+      id: 6,
       period: 'Août 2025',
       company: 'Xarala',
       position: 'Développeur Full-Stack',
@@ -142,7 +163,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 6,
+      id: 7,
       period: 'Mars 2025 – Avril 2025',
       company: 'Niane Technologie',
       position: 'Développeur Full-Stack',
@@ -161,7 +182,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 7,
+      id: 8,
       period: 'Octobre 2024 (Freelance)',
       company: 'Freelance',
       position: 'Développeur Full-Stack',

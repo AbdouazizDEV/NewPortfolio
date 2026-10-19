@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Globe, Users, Lightbulb } from 'lucide-react';
+import { Code, Globe, Users, Lightbulb, CheckCircle, Shield, Clock, UserRound } from 'lucide-react';
 
 const About = () => {
   const stats = [
@@ -30,6 +30,26 @@ const About = () => {
       icon: Lightbulb,
       title: 'Innovation',
       description: 'Toujours à l\'affût des dernières technologies et tendances.'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Qualité',
+      description: 'Je m\'assure que les livrables sont de qualité et répondent aux besoins des clients.'
+    },
+    {
+      icon: Shield,
+      title: 'Sécurité',
+      description: 'Je m\'assure que les livrables sont sécurisés et respectent les normes de sécurité.'
+    },
+    {
+      icon: Clock,
+      title: 'Flexibilité',
+      description: 'Je m\'adapte à vos besoins et à vos contraintes.'
+    },
+    {
+      icon: UserRound,
+      title: 'User Experience',
+      description: 'Je m\'assure que les livrables sont intuitifs et faciles à utiliser.'
     }
   ];
 

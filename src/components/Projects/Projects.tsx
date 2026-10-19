@@ -7,6 +7,18 @@ const Projects = () => {
 
   const projects = [
     {
+      id: 11,
+      title: 'Kondaktor',
+      description: 'Plateforme web de gestion de projets et de tâches, réalisée chez DIZIGROUP avec Angular et NestJS.',
+      image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1792395271/01_Kondaktor_Symbole_Couleur_512px_dv079t.png',
+      technologies: ['Angular', 'NestJS', 'TypeScript', 'Tailwind CSS', 'PostgreSQL'],
+      category: 'web',
+      link: 'https://kondaktor.com/',
+      linkLabel: 'Voir le site web',
+      github: null,
+      featured: true
+    },
+    {
       id: 12,
       title: 'La Cuisine de Maman',
       description: 'Application mobile Ionic pour un restaurant, réalisée chez Jant Tech aux côtés de Jant-couvoir et Let\'s GO.',
@@ -153,7 +165,7 @@ const Projects = () => {
       id:11,
       title: 'Forum des Territoires',
       description: 'Une plateforme stratégique de dialogue, d\'investissement et de coopération décentralisée',
-      image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1770471490/partener_ddnssj.png',
+      image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1792395505/Logo_Forum_1_xptsgf.png',
       technologies: [ 'Node.js', 'Express.js', 'React.js', 'Tailwind CSS'],
       category: 'web',
       link: 'https://forumdesterritoires.com/',
