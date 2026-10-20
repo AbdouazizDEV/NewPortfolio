@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowUpRight, Layers, Waypoints } from 'lucide-react';
+import { SiWhatsapp } from 'react-icons/si';
 import {
   SiIonic,
   SiCapacitor,
@@ -130,7 +131,8 @@ const Hero = () => {
             {[
               { icon: Github, href: 'https://github.com/AbdouaziDEV', label: 'GitHub' },
               { icon: Linkedin, href: 'https://www.linkedin.com/in/abdou-aziz-diop-b1aa05287/', label: 'LinkedIn' },
-              { icon: Mail, href: 'mailto:abdouazizdiop583@gmail.com', label: 'Email' }
+              { icon: Mail, href: 'mailto:abdouazizdiop583@gmail.com', label: 'Email' },
+              { icon: SiWhatsapp, href: 'https://wa.me/221772980105', label: 'WhatsApp' }
             ].map((social) => (
               <a
                 key={social.label}

@@ -13,6 +13,7 @@ import {
   CheckCircle,
   AlertCircle
 } from 'lucide-react';
+import { SiWhatsapp } from 'react-icons/si';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -91,6 +92,13 @@ const Contact = () => {
       color: 'text-blue-600'
     },
     {
+      icon: SiWhatsapp,
+      label: 'WhatsApp',
+      value: '+221 77 298 01 05',
+      href: 'https://wa.me/221772980105',
+      color: 'text-[#25D366]'
+    },
+    {
       icon: MapPin,
       label: 'Localisation',
       value: 'Dakar, Sénégal',
@@ -111,6 +119,12 @@ const Contact = () => {
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/in/abdou-aziz-diop-b1aa05287/',
       color: 'hover:text-blue-600'
+    },
+    {
+      icon: SiWhatsapp,
+      label: 'WhatsApp',
+      href: 'https://wa.me/221772980105',
+      color: 'hover:text-[#25D366]'
     }
   ];
 
@@ -146,6 +160,8 @@ const Contact = () => {
                 <motion.a
                   key={contact.label}
                   href={contact.href}
+                  target={contact.href.startsWith('http') ? '_blank' : undefined}
+                  rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -174,6 +190,7 @@ const Contact = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={social.label}
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
