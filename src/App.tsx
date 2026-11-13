@@ -1,28 +1,18 @@
-import SEO from './components/SEO/SEO';
-import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Experience from './components/Experience/Experience';
-import Skills from './components/Skills/Skills';
-import Projects from './components/Projects/Projects';
-import Education from './components/Education/Education';
-import Contact from './components/Contact/Contact';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import ExperienceDetail from './pages/ExperienceDetail';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#f4f1ea] text-[#14241c]">
-      <SEO />
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Education />
-        <Contact />
-      </main>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/experience/dizigroup-quizz" element={<Navigate to="/experience/dizigroup" replace />} />
+        <Route path="/experience/dizigroup-kondaktor" element={<Navigate to="/experience/dizigroup" replace />} />
+        <Route path="/experience/:slug" element={<ExperienceDetail />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
