@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import {
   ArrowLeft,
@@ -10,14 +11,16 @@ import {
   ExternalLink,
   MapPin,
 } from 'lucide-react';
-import { getExperienceBySlug, experiences } from '../data/experiences';
+import { useLocalizedExperience, useLocalizedExperiences } from '../hooks/useLocalizedExperiences';
 import TechBadge from '../components/TechBadge/TechBadge';
 import Header from '../components/Header/Header';
 
 const ExperienceDetail = () => {
+  const { t } = useTranslation();
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const experience = slug ? getExperienceBySlug(slug) : undefined;
+  const experiences = useLocalizedExperiences();
+  const experience = useLocalizedExperience(slug);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -28,14 +31,14 @@ const ExperienceDetail = () => {
       <div className="min-h-screen bg-[#f4f1ea]">
         <Header forceSolid />
         <main className="mx-auto flex max-w-3xl flex-col items-center px-4 pb-24 pt-32 text-center">
-          <h1 className="text-3xl font-semibold text-[#14241c]">Expérience introuvable</h1>
-          <p className="mt-3 text-stone-600">Cette mission n’existe pas ou a été déplacée.</p>
+          <h1 className="text-3xl font-semibold text-[#14241c]">{t('experience.notFoundTitle')}</h1>
+          <p className="mt-3 text-stone-600">{t('experience.notFoundText')}</p>
           <Link
             to="/#experience"
             className="mt-8 inline-flex items-center rounded-full bg-emerald-800 px-5 py-2.5 text-sm font-semibold text-white hover:bg-emerald-900"
           >
             <ArrowLeft size={16} className="mr-2" />
-            Retour aux expériences
+            {t('experience.backToList')}
           </Link>
         </main>
       </div>
@@ -68,7 +71,7 @@ const ExperienceDetail = () => {
               className="mb-8 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-emerald-50 transition hover:bg-white/10"
             >
               <ArrowLeft size={16} className="mr-2" />
-              Retour au parcours
+              {t('experience.backToPath')}
             </button>
 
             <motion.div
@@ -116,7 +119,7 @@ const ExperienceDetail = () => {
               </span>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-800">
-                  Entreprise
+                  {t('experience.company')}
                 </p>
                 <h2 className="text-2xl font-semibold tracking-tight">{experience.company}</h2>
               </div>
@@ -134,7 +137,7 @@ const ExperienceDetail = () => {
               transition={{ delay: 0.1 }}
               className="rounded-[2rem] border border-stone-200/80 bg-white p-7 md:p-8"
             >
-              <h2 className="text-xl font-semibold tracking-tight">Responsabilités</h2>
+              <h2 className="text-xl font-semibold tracking-tight">{t('experience.responsibilities')}</h2>
               <ul className="mt-5 space-y-3">
                 {experience.responsibilities.map((item) => (
                   <li key={item} className="flex items-start text-stone-600">
@@ -151,7 +154,7 @@ const ExperienceDetail = () => {
               transition={{ delay: 0.15 }}
               className="rounded-[2rem] border border-stone-200/80 bg-white p-7 md:p-8"
             >
-              <h2 className="text-xl font-semibold tracking-tight">Résultats clés</h2>
+              <h2 className="text-xl font-semibold tracking-tight">{t('experience.achievements')}</h2>
               <ul className="mt-5 space-y-3">
                 {experience.achievements.map((item) => (
                   <li key={item} className="flex items-start text-stone-600">
@@ -169,8 +172,8 @@ const ExperienceDetail = () => {
             transition={{ delay: 0.2 }}
             className="rounded-[2rem] border border-stone-200/80 bg-white p-7 md:p-8"
           >
-            <h2 className="text-xl font-semibold tracking-tight">Technologies</h2>
-            <p className="mt-2 text-stone-600">Stack utilisée sur cette mission.</p>
+            <h2 className="text-xl font-semibold tracking-tight">{t('experience.technologies')}</h2>
+            <p className="mt-2 text-stone-600">{t('experience.technologiesHint')}</p>
             <div className="mt-5 flex flex-wrap gap-2.5">
               {experience.technologies.map((tech) => (
                 <TechBadge key={tech} tech={tech} size="md" />
@@ -185,14 +188,12 @@ const ExperienceDetail = () => {
           >
             <div className="mb-6">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-800">
-                Livrables
+                {t('experience.deliverables')}
               </p>
               <h2 className="mt-2 text-3xl font-semibold tracking-tight">
-                Projets réalisés
+                {t('experience.projectsTitle')}
               </h2>
-              <p className="mt-2 max-w-2xl text-stone-600">
-                Les produits et plateformes livrés dans le cadre de cette expérience.
-              </p>
+              <p className="mt-2 max-w-2xl text-stone-600">{t('experience.projectsHint')}</p>
             </div>
 
             <div className="grid gap-5 md:grid-cols-2">
@@ -254,10 +255,8 @@ const ExperienceDetail = () => {
               transition={{ delay: 0.3 }}
               className="rounded-[2rem] border border-emerald-900/10 bg-[#10261c] p-7 text-[#f4f1ea] md:p-8"
             >
-              <h2 className="text-xl font-semibold tracking-tight">Liens utiles</h2>
-              <p className="mt-2 text-emerald-50/70">
-                Accédez aux sites, démos et documentations liés à cette mission.
-              </p>
+              <h2 className="text-xl font-semibold tracking-tight">{t('experience.usefulLinks')}</h2>
+              <p className="mt-2 text-emerald-50/70">{t('experience.usefulLinksHint')}</p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {experience.links.map((link) => (
                   <a
@@ -282,7 +281,7 @@ const ExperienceDetail = () => {
                 className="rounded-3xl border border-stone-200 bg-white p-5 transition hover:border-emerald-800/30"
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-stone-400">
-                  Précédent
+                  {t('experience.previous')}
                 </p>
                 <p className="mt-2 font-semibold text-[#14241c]">{previous.company}</p>
                 <p className="mt-1 text-sm text-stone-600">{previous.position}</p>
@@ -296,7 +295,7 @@ const ExperienceDetail = () => {
                 className="rounded-3xl border border-stone-200 bg-white p-5 text-right transition hover:border-emerald-800/30 sm:justify-self-end sm:text-right"
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-stone-400">
-                  Suivant
+                  {t('experience.next')}
                 </p>
                 <p className="mt-2 font-semibold text-[#14241c]">{next.company}</p>
                 <p className="mt-1 text-sm text-stone-600">{next.position}</p>

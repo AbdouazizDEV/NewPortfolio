@@ -1,0 +1,22 @@
+/** English descriptions keyed by project id (see Projects.tsx). */
+export const projectsEn: Record<number, string> = {
+  15: "Bilingual Next.js platform for SDMI (Dakar): technical catalogue with 12,000+ references, stock selector (DN/PN/material), fire protection / oil & gas / agro / mining sectors, quotes within 24 h and contact for the Bopp branch. Ongoing freelance mission.",
+  16: "Corporate website for DIZIGROUP: digital engineering, consulting, ventures (Quizz+, Kondaktor, DiziPay) and nearshore from Dakar. Built as technical lead.",
+  11: "Organizational orchestration system (strategy → decisions → actions → results) with AI agents under human governance. Web application and back-office built at DIZIGROUP.",
+  17: "JantAgro Ionic mobile app (formerly Jant-couvoir): poultry and farm monitoring in the field (livestock, feeding, production). Freelance mission at Jant Tech.",
+  18: "Urban mobility mobile app: on-demand rides, driver–passenger matching and trip tracking. Built with Ionic at Jant Tech.",
+  12: "Ionic mobile app for a restaurant, built at Jant Tech alongside JantAgro and Let's GO.",
+  13: "Gamified quiz arena (duels, leaderboards, rewards) for Africa and the francophone world. At DIZIGROUP: mobile app, web application and back-office (web & BO as a single app).",
+  14: "Unified digital platform available on Web and Mobile (hybrid), inspired by a digital banking system. It centralizes support services across multiple strategic areas, all accessible from a single app with a unified payment system and real-time request tracking.",
+  19: "EAS (Écoles au Sénégal) education platform: students, courses, teachers and official documents. Laravel 12, Angular, MySQL, Redis and Swagger API - linked to taggatma.com and ecolesausenegal.org.",
+  2: "Official platform of the National Assembly with management of members of parliament, parliamentary sessions and official documents.",
+  3: "Complete restaurant booking management platform with customer interface and back-office.",
+  4: "Medical appointment management app with patient and doctor interfaces.",
+  5: "Social platform for tailors with sharing of creations and client–tailor matching.",
+  6: "Modern e-commerce platform with product, order and payment management.",
+  7: "Mobile banking app with transfers, account management and notifications.",
+  8: "Xarala trains thousands of learners in modern web technologies. To test my versatility, they gave me a mini-project to deliver in 48 hours. No code or mockups were provided: I started from scratch, drawing on best practices and freely using open-source frameworks.",
+  9: "We believe in a Bambey where every citizen has access to quality infrastructure, excellent education, accessible healthcare and fair economic opportunities. Our vision is a dynamic, inclusive and forward-looking city.",
+  10: "Modern web platform that lets customers search travel offers and automatically send their request to the agency via WhatsApp, with a simplified back-office to manage offers.",
+  20: "Redesign of the Africa–Europe institutional website: programme (conferences, immersion, exhibition, Gaindé Awards), registration/partner journeys, news and FR/EN/ES/中文 multilingual support. Freelance mission, February 2026.",
+};

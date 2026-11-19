@@ -1,0 +1,200 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "experience": "Expériences",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "education": "Formation",
+    "contact": "Contact",
+    "cv": "CV",
+    "downloadCv": "Télécharger CV"
+  },
+  "hero": {
+    "badge": "Dakar · Produits web & mobile",
+    "roles": {
+      "fullstack": "Développeur Full-Stack",
+      "mobile": "Développeur Mobile",
+      "lead": "Responsable technique"
+    },
+    "intro": "Responsable technique et développeur full-stack. J'architecture des plateformes, je livre des applications mobiles en production et j'encadre la qualité des livrables.",
+    "viewProjects": "Voir les projets",
+    "contactMe": "Me contacter"
+  },
+  "about": {
+    "eyebrow": "Profil",
+    "title": "À propos",
+    "subtitle": "Développeur Full-Stack web et mobile",
+    "p1": "J'accompagne entreprises, institutions et startups dans la conception de plateformes web, d'applications mobiles et de systèmes digitaux capables de répondre à des problèmes concrets.",
+    "p2": "Spécialisé dans l'écosystème JavaScript, je couvre l'analyse des besoins, l'architecture, le développement, l'intégration d'API, le déploiement et la maintenance. Les missions récentes vont de La Cuisine de Maman (Ionic) au pilotage technique chez DIZIGROUP.",
+    "languagesLabel": "Langues :",
+    "languagesValue": "Français, Anglais, Wolof, Serrère",
+    "philosophyTitle": "Ma philosophie",
+    "philosophy": "\"Le code n'est pas seulement fonctionnel, il doit être élégant, maintenable et résoudre de vrais problèmes. Chaque ligne écrite doit apporter de la valeur.\"",
+    "valuesTitle": "Ce qui guide mon travail",
+    "stats": {
+      "years": "Années d'expérience",
+      "projects": "Projets réalisés",
+      "languages": "Langues parlées",
+      "satisfaction": "Satisfaction client"
+    },
+    "values": {
+      "code": { "title": "Code de qualité", "description": "Je privilégie la lisibilité, la maintenabilité et les bonnes pratiques." },
+      "vision": { "title": "Vision globale", "description": "Une approche holistique du développement, du frontend au backend." },
+      "collab": { "title": "Collaboration", "description": "Travail d'équipe efficace et communication transparente." },
+      "innovation": { "title": "Innovation", "description": "Toujours à l'affût des dernières technologies et tendances." },
+      "quality": { "title": "Qualité", "description": "Je m'assure que les livrables sont de qualité et répondent aux besoins des clients." },
+      "security": { "title": "Sécurité", "description": "Je m'assure que les livrables sont sécurisés et respectent les normes de sécurité." },
+      "flexibility": { "title": "Flexibilité", "description": "Je m'adapte à vos besoins et à vos contraintes." },
+      "ux": { "title": "User Experience", "description": "Je m'assure que les livrables sont intuitifs et faciles à utiliser." }
+    }
+  },
+  "experience": {
+    "eyebrow": "Parcours",
+    "title": "Expériences professionnelles",
+    "subtitle": "Du mobile Ionic aux plateformes institutionnelles, avec un rôle de responsable technique chez DIZIGROUP. Cliquez sur une expérience pour voir le détail.",
+    "viewDetail": "Voir le détail",
+    "notFoundTitle": "Expérience introuvable",
+    "notFoundText": "Cette mission n'existe pas ou a été déplacée.",
+    "backToList": "Retour aux expériences",
+    "backToPath": "Retour au parcours",
+    "company": "Entreprise",
+    "responsibilities": "Responsabilités",
+    "achievements": "Résultats clés",
+    "technologies": "Technologies",
+    "technologiesHint": "Stack utilisée sur cette mission.",
+    "deliverables": "Livrables",
+    "projectsTitle": "Projets réalisés",
+    "projectsHint": "Les produits et plateformes livrés dans le cadre de cette expérience.",
+    "usefulLinks": "Liens utiles",
+    "usefulLinksHint": "Accédez aux sites, démos et documentations liés à cette mission.",
+    "previous": "Précédent",
+    "next": "Suivant"
+  },
+  "skills": {
+    "eyebrow": "Savoir-faire",
+    "title": "Compétences",
+    "subtitle": "Web, mobile et API : Ionic, React, Angular, Laravel, NestJS, avec une attention portée à Clean Architecture et SOLID.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Bases de Données",
+      "tools": "Outils & DevOps",
+      "mobile": "Mobile",
+      "soft": "Soft Skills"
+    },
+    "soft": {
+      "problemSolving": "Résolution de problèmes",
+      "architecture": "Clean Architecture & SOLID",
+      "teamwork": "Travail en équipe",
+      "communication": "Communication",
+      "learning": "Apprentissage rapide",
+      "projectMgmt": "Gestion de projet"
+    }
+  },
+  "projects": {
+    "eyebrow": "Réalisations",
+    "title": "Projets",
+    "subtitle": "Applications mobiles, plateformes web et outils métier livrés pour des entreprises et des institutions.",
+    "filters": {
+      "all": "Tous les projets",
+      "web": "Applications Web",
+      "mobile": "Applications Mobile",
+      "featured": "Projets Phares"
+    },
+    "featured": "Projet Phare",
+    "viewSite": "Voir le site",
+    "sourceCode": "Code source",
+    "ctaTitle": "Un projet en tête ?",
+    "ctaText": "Discutons de votre besoin et construisons une solution solide.",
+    "ctaButton": "Discutons de votre projet"
+  },
+  "education": {
+    "eyebrow": "Parcours",
+    "title": "Formation et certifications",
+    "subtitle": "Licence de mathématiques et informatique à l'UCAD-FST, complétée par Sonatel Academy, SunuCode et des certificats en ligne.",
+    "academic": "Formation Académique",
+    "certifications": "Certifications",
+    "highlights": "Points clés :",
+    "continuousTitle": "Formation Continue",
+    "continuousText": "Je crois fermement en l'apprentissage continu. Chaque semaine, je consacre du temps à explorer de nouvelles technologies, suivre des cours en ligne, et participer à des webinaires pour rester à jour avec les dernières innovations du secteur.",
+    "items": {
+      "l3": {
+        "period": "Février 2026 – En cours",
+        "degree": "Licence 3 Mathématiques et Informatique",
+        "description": "Troisième année de licence, en parallèle de missions de développement web et mobile.",
+        "h1": "Approfondissement en informatique",
+        "h2": "Projets appliqués au développement logiciel",
+        "h3": "Bases de données et systèmes"
+      },
+      "l2": {
+        "period": "Décembre 2025",
+        "degree": "Licence 2 Mathématiques et Informatique",
+        "description": "Deuxième année de licence en mathématiques et informatique.",
+        "h1": "Algorithmique et structures de données",
+        "h2": "Programmation et systèmes",
+        "h3": "Mathématiques appliquées"
+      },
+      "sonatel": {
+        "period": "Février 2024 – Novembre 2024",
+        "degree": "Développement web et mobile",
+        "description": "Formation au développement web et mobile, complétée par un certificat Sonatel Academy.",
+        "h1": "Développement web full-stack",
+        "h2": "Applications mobiles",
+        "h3": "Projets pratiques"
+      },
+      "sunucode": {
+        "period": "Juillet 2023 – Décembre 2023",
+        "degree": "Développement web",
+        "description": "Parcours pratique de développement web, du frontend au backend.",
+        "h1": "HTML, CSS et JavaScript",
+        "h2": "Interfaces et APIs",
+        "h3": "Certificat en développement web"
+      },
+      "l1": {
+        "period": "Novembre 2022 – Juin 2023",
+        "degree": "Licence 1 Mathématiques et Informatique",
+        "description": "Première année de licence en mathématiques et informatique.",
+        "h1": "Fondamentaux mathématiques",
+        "h2": "Initiation à l'informatique",
+        "h3": "Algorithmique"
+      }
+    },
+    "certs": {
+      "sonatel": "Développement web et mobile",
+      "sql": "Introduction to Relational Database and SQL",
+      "apis": "APIs in Node.js : Write a RESTful API Backend Application",
+      "sunucode": "Certificat en développement web",
+      "ai": "Certificat en Intelligence Artificielle"
+    }
+  },
+  "contact": {
+    "eyebrow": "Échange",
+    "title": "Contact",
+    "subtitle": "Prêt à donner vie à votre projet ? Discutons de vos besoins et de vos objectifs.",
+    "stayInTouch": "Restons en contact",
+    "followMe": "Suivez-moi",
+    "references": "Références Professionnelles",
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "locationValue": "Dakar, Sénégal",
+    "formTitle": "Envoyez-moi un message",
+    "name": "Nom complet",
+    "namePlaceholder": "Votre nom",
+    "email": "Email",
+    "emailPlaceholder": "votre@email.com",
+    "subject": "Sujet",
+    "subjectPlaceholder": "Sujet de votre message",
+    "message": "Message",
+    "messagePlaceholder": "Décrivez votre projet ou votre demande...",
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "success": "Message envoyé avec succès. Je vous répondrai rapidement.",
+    "error": "Une erreur est survenue. Réessayez ou contactez-moi directement."
+  },
+  "lang": {
+    "fr": "FR",
+    "en": "EN",
+    "switchTo": "Changer de langue"
+  }
+}

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { 
   Code, 
   Server, 
@@ -57,6 +58,8 @@ import {
 } from 'react-icons/si';
 
 const Skills = () => {
+  const { t, i18n } = useTranslation();
+  const isEn = i18n.language.startsWith('en');
   const [activeCategory, setActiveCategory] = useState('frontend');
 
   const skillCategories = {
@@ -142,12 +145,12 @@ const Skills = () => {
       icon: Brain,
       color: 'indigo',
       skills: [
-        { name: 'Résolution de problèmes', level: 95, icon: Puzzle, color: '#047857' },
-        { name: 'Clean Architecture & SOLID', level: 86, icon: Layers, color: '#047857' },
-        { name: 'Travail en équipe', level: 90, icon: Users, color: '#047857' },
-        { name: 'Communication', level: 88, icon: MessageCircle, color: '#047857' },
-        { name: 'Apprentissage rapide', level: 93, icon: BookOpen, color: '#047857' },
-        { name: 'Gestion de projet', level: 90, icon: ClipboardList, color: '#047857' },
+        { name: 'Résolution de problèmes', nameKey: 'skills.soft.problemSolving', level: 95, icon: Puzzle, color: '#047857' },
+        { name: 'Clean Architecture & SOLID', nameKey: 'skills.soft.architecture', level: 86, icon: Layers, color: '#047857' },
+        { name: 'Travail en équipe', nameKey: 'skills.soft.teamwork', level: 90, icon: Users, color: '#047857' },
+        { name: 'Communication', nameKey: 'skills.soft.communication', level: 88, icon: MessageCircle, color: '#047857' },
+        { name: 'Apprentissage rapide', nameKey: 'skills.soft.learning', level: 93, icon: BookOpen, color: '#047857' },
+        { name: 'Gestion de projet', nameKey: 'skills.soft.projectMgmt', level: 90, icon: ClipboardList, color: '#047857' },
       ]
     }
   };
@@ -178,10 +181,10 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="mb-14 max-w-2xl"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-800 mb-3">Savoir-faire</p>
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#14241c]">Compétences</h2>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-800 mb-3">{t('skills.eyebrow')}</p>
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#14241c]">{t('skills.title')}</h2>
           <p className="mt-4 text-lg text-stone-600 leading-relaxed">
-            Web, mobile et API : Ionic, React, Angular, Laravel, NestJS, avec une attention portée à Clean Architecture et SOLID.
+            {t('skills.subtitle')}
           </p>
         </motion.div>
 
@@ -205,7 +208,7 @@ const Skills = () => {
                 }`}
               >
                 <IconComponent size={20} className="mr-2" />
-                {category.title}
+                {t(`skills.categories.${key}`)}
               </motion.button>
             );
           })}
@@ -233,7 +236,7 @@ const Skills = () => {
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
                     <skill.icon size={22} color={skill.color} className="mr-3 shrink-0" aria-hidden />
-                    <h3 className="font-semibold text-gray-900">{skill.name}</h3>
+                    <h3 className="font-semibold text-gray-900">{'nameKey' in skill ? t(skill.nameKey) : skill.name}</h3>
                   </div>
                   <span className="text-emerald-600 font-bold">{skill.level}%</span>
                 </div>
@@ -260,24 +263,24 @@ const Skills = () => {
           className="mt-16"
         >
           <div className="rounded-3xl border border-stone-200 bg-[#f7f5f0] p-8 text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">En Constante Évolution</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">{isEn ? 'Constantly Evolving' : 'En Constante Évolution'}</h3>
             <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              La technologie évolue rapidement, et moi aussi. Je consacre du temps régulièrement 
-              à l'apprentissage de nouvelles technologies, la participation à des projets open source, 
-              et la veille technologique pour rester à la pointe des innovations du développement web.
+              {isEn
+                ? 'Technology moves fast, and so do I. I regularly set aside time to learn new technologies, contribute to open source projects, and keep up with the latest innovations in web development.'
+                : "La technologie évolue rapidement, et moi aussi. Je consacre du temps régulièrement à l'apprentissage de nouvelles technologies, la participation à des projets open source, et la veille technologique pour rester à la pointe des innovations du développement web."}
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-emerald-800">
               <div className="flex items-center">
                 <Target size={20} className="mr-2" />
-                <span className="font-medium">Orienté résultats</span>
+                <span className="font-medium">{isEn ? 'Results-driven' : 'Orienté résultats'}</span>
               </div>
               <div className="flex items-center">
                 <Zap size={20} className="mr-2" />
-                <span className="font-medium">Performance optimale</span>
+                <span className="font-medium">{isEn ? 'Optimal performance' : 'Performance optimale'}</span>
               </div>
               <div className="flex items-center">
                 <Lightbulb size={20} className="mr-2" />
-                <span className="font-medium">Solutions innovantes</span>
+                <span className="font-medium">{isEn ? 'Innovative solutions' : 'Solutions innovantes'}</span>
               </div>
             </div>
           </div>

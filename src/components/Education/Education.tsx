@@ -1,107 +1,40 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { GraduationCap, Award, Calendar, MapPin, ExternalLink } from 'lucide-react';
 
 const Education = () => {
-  const education = [
-    {
-      id: 1,
-      period: 'Février 2026 – En cours',
-      institution: 'UCAD-FST',
-      degree: 'Licence 3 Mathématiques et Informatique',
-      location: 'Dakar, Sénégal',
-      description: 'Troisième année de licence, en parallèle de missions de développement web et mobile.',
-      highlights: [
-        'Approfondissement en informatique',
-        'Projets appliqués au développement logiciel',
-        'Bases de données et systèmes'
-      ]
-    },
-    {
-      id: 2,
-      period: 'Décembre 2025',
-      institution: 'UCAD-FST',
-      degree: 'Licence 2 Mathématiques et Informatique',
-      location: 'Dakar, Sénégal',
-      description: 'Deuxième année de licence en mathématiques et informatique.',
-      highlights: [
-        'Algorithmique et structures de données',
-        'Programmation et systèmes',
-        'Mathématiques appliquées'
-      ]
-    },
-    {
-      id: 3,
-      period: 'Février 2024 – Novembre 2024',
-      institution: 'Sonatel Academy',
-      degree: 'Développement web et mobile',
-      location: 'Dakar, Sénégal',
-      description: 'Formation au développement web et mobile, complétée par un certificat Sonatel Academy.',
-      highlights: [
-        'Développement web full-stack',
-        'Applications mobiles',
-        'Projets pratiques'
-      ]
-    },
-    {
-      id: 4,
-      period: 'Juillet 2023 – Décembre 2023',
-      institution: 'SunuCode',
-      degree: 'Développement web',
-      location: 'Dakar, Sénégal',
-      description: 'Parcours pratique de développement web, du frontend au backend.',
-      highlights: [
-        'HTML, CSS et JavaScript',
-        'Interfaces et APIs',
-        'Certificat en développement web'
-      ]
-    },
-    {
-      id: 5,
-      period: 'Novembre 2022 – Juin 2023',
-      institution: 'UCAD-FST',
-      degree: 'Licence 1 Mathématiques et Informatique',
-      location: 'Dakar, Sénégal',
-      description: 'Première année de licence en mathématiques et informatique.',
-      highlights: [
-        'Fondamentaux mathématiques',
-        'Initiation à l\'informatique',
-        'Algorithmique'
-      ]
-    }
-  ];
+  const { t, i18n } = useTranslation();
+  const isEn = i18n.language.startsWith('en');
+  const location = isEn ? 'Dakar, Senegal' : 'Dakar, Sénégal';
 
-  const certifications = [
-    {
-      title: 'Développement web et mobile',
-      issuer: 'Sonatel Academy',
-      date: '2024',
-      icon: '📱'
-    },
-    {
-      title: 'Introduction to Relational Database and SQL',
-      issuer: 'Coursera',
-      date: '2024',
-      icon: '🗄️'
-    },
-    {
-      title: 'APIs in Node.js : Write a RESTful API Backend Application',
-      issuer: 'Coursera',
-      date: '2024',
-      icon: '🔗'
-    },
-    {
-      title: 'Certificat en développement web',
-      issuer: 'SunuCode',
-      date: '2023',
-      icon: '💻'
-    },
-    {
-      title: 'Certificat en Intelligence Artificielle',
-      issuer: 'Programme FORCE-N',
-      date: '2023',
-      icon: '🤖'
-    }
+  const educationDefs = [
+    { id: 1, key: 'l3', institution: 'UCAD-FST' },
+    { id: 2, key: 'l2', institution: 'UCAD-FST' },
+    { id: 3, key: 'sonatel', institution: 'Sonatel Academy' },
+    { id: 4, key: 'sunucode', institution: 'SunuCode' },
+    { id: 5, key: 'l1', institution: 'UCAD-FST' },
+  ] as const;
+
+  const education = educationDefs.map(({ id, key, institution }) => ({
+    id,
+    period: t(`education.items.${key}.period`),
+    institution,
+    degree: t(`education.items.${key}.degree`),
+    location,
+    description: t(`education.items.${key}.description`),
+    highlights: [
+      t(`education.items.${key}.h1`),
+      t(`education.items.${key}.h2`),
+      t(`education.items.${key}.h3`),
+    ],
+  }));
+
+  const certifications: { id: string; title: string; issuer: string; date: string; icon: string; link?: string }[] = [
+    { id: 'sonatel', title: t('education.certs.sonatel'), issuer: 'Sonatel Academy', date: '2024', icon: '📱' },
+    { id: 'sql', title: t('education.certs.sql'), issuer: 'Coursera', date: '2024', icon: '🗄️' },
+    { id: 'apis', title: t('education.certs.apis'), issuer: 'Coursera', date: '2024', icon: '🔗' },
+    { id: 'sunucode', title: t('education.certs.sunucode'), issuer: 'SunuCode', date: '2023', icon: '💻' },
+    { id: 'ai', title: t('education.certs.ai'), issuer: 'Programme FORCE-N', date: '2023', icon: '🤖' },
   ];
 
   return (
@@ -114,10 +47,10 @@ const Education = () => {
           transition={{ duration: 0.6 }}
           className="mb-14 max-w-2xl"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-800 mb-3">Parcours</p>
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#14241c]">Formation et certifications</h2>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-800 mb-3">{t('education.eyebrow')}</p>
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#14241c]">{t('education.title')}</h2>
           <p className="mt-4 text-lg text-stone-600 leading-relaxed">
-            Licence de mathématiques et informatique à l'UCAD-FST, complétée par Sonatel Academy, SunuCode et des certificats en ligne.
+            {t('education.subtitle')}
           </p>
         </motion.div>
 
@@ -131,7 +64,7 @@ const Education = () => {
               className="text-2xl font-bold text-gray-900 mb-8 flex items-center"
             >
               <GraduationCap className="mr-3 text-emerald-600" size={24} />
-              Formation Académique
+              {t('education.academic')}
             </motion.h3>
 
             <div className="relative">
@@ -171,7 +104,7 @@ const Education = () => {
                         <p className="text-gray-600 mb-4 leading-relaxed">{edu.description}</p>
                         
                         <div>
-                          <h5 className="font-semibold text-gray-900 mb-2">Points clés :</h5>
+                          <h5 className="font-semibold text-gray-900 mb-2">{t('education.highlights')}</h5>
                           <ul className="space-y-1">
                             {edu.highlights.map((highlight, hlIndex) => (
                               <li key={hlIndex} className="flex items-start">
@@ -198,13 +131,13 @@ const Education = () => {
               className="text-2xl font-bold text-gray-900 mb-8 flex items-center"
             >
               <Award className="mr-3 text-emerald-600" size={24} />
-              Certifications
+              {t('education.certifications')}
             </motion.h3>
 
             <div className="space-y-6">
               {certifications.map((cert, index) => (
                 <motion.div
-                  key={cert.title}
+                  key={cert.id}
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -224,7 +157,7 @@ const Education = () => {
                         </div>
                       </div>
                     </div>
-                    {'link' in cert && cert.link ? (
+                    {cert.link ? (
                       <motion.a
                         href={cert.link}
                         target="_blank"
@@ -249,11 +182,9 @@ const Education = () => {
               transition={{ delay: 0.5 }}
               className="mt-8 rounded-3xl bg-emerald-900 p-6 text-white"
             >
-              <h4 className="font-bold text-lg mb-3">🎯 Formation Continue</h4>
+              <h4 className="font-bold text-lg mb-3">🎯 {t('education.continuousTitle')}</h4>
               <p className="text-emerald-100/90 leading-relaxed">
-                Je crois fermement en l'apprentissage continu. Chaque semaine, je consacre du temps 
-                à explorer de nouvelles technologies, suivre des cours en ligne, et participer à des 
-                webinaires pour rester à jour avec les dernières innovations du secteur.
+                {t('education.continuousText')}
               </p>
             </motion.div>
           </div>

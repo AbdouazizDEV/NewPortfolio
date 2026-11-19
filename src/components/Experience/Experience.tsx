@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Briefcase, Calendar } from 'lucide-react';
-import { experiences } from '../../data/experiences';
+import { useLocalizedExperiences } from '../../hooks/useLocalizedExperiences';
 import TechBadge from '../TechBadge/TechBadge';
 
 const Experience = () => {
+  const { t } = useTranslation();
+  const experiences = useLocalizedExperiences();
+
   return (
     <section id="experience" className="bg-[#f4f1ea] py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -16,14 +20,13 @@ const Experience = () => {
           className="mb-14 max-w-2xl"
         >
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-800">
-            Parcours
+            {t('experience.eyebrow')}
           </p>
           <h2 className="text-4xl font-semibold tracking-tight text-[#14241c] md:text-5xl">
-            Expériences professionnelles
+            {t('experience.title')}
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-stone-600">
-            Du mobile Ionic aux plateformes institutionnelles, avec un rôle de responsable
-            technique chez DIZIGROUP. Cliquez sur une expérience pour voir le détail.
+            {t('experience.subtitle')}
           </p>
         </motion.div>
 
@@ -58,7 +61,7 @@ const Experience = () => {
                       </span>
                     </div>
                     <span className="inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-900 transition group-hover:bg-emerald-800 group-hover:text-white">
-                      Voir le détail
+                      {t('experience.viewDetail')}
                       <ArrowUpRight size={14} className="ml-1.5" />
                     </span>
                   </div>

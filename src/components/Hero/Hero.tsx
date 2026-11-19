@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowUpRight, Layers, Waypoints } from 'lucide-react';
 import { SiWhatsapp } from 'react-icons/si';
@@ -28,15 +29,21 @@ import { VscVscode } from 'react-icons/vsc';
 import type { IconType } from 'react-icons';
 
 const Hero = () => {
+  const { t, i18n } = useTranslation();
   const [currentRole, setCurrentRole] = useState(0);
-  const roles = ['Développeur Full-Stack', 'Développeur Mobile', 'Responsable technique'];
+  const roles = [
+    t('hero.roles.fullstack'),
+    t('hero.roles.mobile'),
+    t('hero.roles.lead'),
+  ];
 
   useEffect(() => {
+    setCurrentRole(0);
     const interval = setInterval(() => {
-      setCurrentRole((prev) => (prev + 1) % roles.length);
+      setCurrentRole((prev) => (prev + 1) % 3);
     }, 2800);
     return () => clearInterval(interval);
-  }, []);
+  }, [i18n.language]);
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -87,7 +94,7 @@ const Hero = () => {
           transition={{ duration: 0.7 }}
         >
           <p className="mb-5 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">
-            Dakar · Produits web & mobile
+            {t('hero.badge')}
           </p>
 
           <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl lg:text-7xl">
@@ -97,7 +104,7 @@ const Hero = () => {
 
           <div className="mt-6 h-8 text-xl font-medium text-emerald-100/80 sm:text-2xl">
             <motion.span
-              key={currentRole}
+              key={`${i18n.language}-${currentRole}`}
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               className="inline-block"
@@ -107,8 +114,7 @@ const Hero = () => {
           </div>
 
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-emerald-50/75">
-            Responsable technique et développeur full-stack. J'architecture des plateformes,
-            je livre des applications mobiles en production et j'encadre la qualité des livrables.
+            {t('hero.intro')}
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -116,14 +122,14 @@ const Hero = () => {
               onClick={() => scrollToSection('#projects')}
               className="inline-flex items-center justify-center rounded-full bg-emerald-800 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-900"
             >
-              Voir les projets
+              {t('hero.viewProjects')}
               <ArrowUpRight size={16} className="ml-2" />
             </button>
             <button
               onClick={() => scrollToSection('#contact')}
               className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
-              Me contacter
+              {t('hero.contactMe')}
             </button>
           </div>
 
@@ -132,7 +138,7 @@ const Hero = () => {
               { icon: Github, href: 'https://github.com/AbdouaziDEV', label: 'GitHub' },
               { icon: Linkedin, href: 'https://www.linkedin.com/in/abdou-aziz-diop-b1aa05287/', label: 'LinkedIn' },
               { icon: Mail, href: 'mailto:abdouazizdiop583@gmail.com', label: 'Email' },
-              { icon: SiWhatsapp, href: 'https://wa.me/221772980105', label: 'WhatsApp' }
+              { icon: SiWhatsapp, href: 'https://wa.me/221772980105', label: 'WhatsApp' },
             ].map((social) => (
               <a
                 key={social.label}

@@ -1,0 +1,200 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact",
+    "cv": "CV",
+    "downloadCv": "Download CV"
+  },
+  "hero": {
+    "badge": "Dakar · Web & mobile products",
+    "roles": {
+      "fullstack": "Full-Stack Developer",
+      "mobile": "Mobile Developer",
+      "lead": "Technical Lead"
+    },
+    "intro": "Technical lead and full-stack developer. I design platform architectures, ship production mobile apps, and uphold delivery quality.",
+    "viewProjects": "View projects",
+    "contactMe": "Contact me"
+  },
+  "about": {
+    "eyebrow": "Profile",
+    "title": "About",
+    "subtitle": "Full-Stack web and mobile developer",
+    "p1": "I help companies, institutions and startups design web platforms, mobile apps and digital systems that solve real problems.",
+    "p2": "Specialized in the JavaScript ecosystem, I cover requirements analysis, architecture, development, API integration, deployment and maintenance. Recent missions range from La Cuisine de Maman (Ionic) to technical leadership at DIZIGROUP.",
+    "languagesLabel": "Languages:",
+    "languagesValue": "French, English, Wolof, Serer",
+    "philosophyTitle": "My philosophy",
+    "philosophy": "\"Code should not only work — it should be elegant, maintainable and solve real problems. Every line should create value.\"",
+    "valuesTitle": "What guides my work",
+    "stats": {
+      "years": "Years of experience",
+      "projects": "Projects delivered",
+      "languages": "Languages spoken",
+      "satisfaction": "Client satisfaction"
+    },
+    "values": {
+      "code": { "title": "Quality code", "description": "I prioritize readability, maintainability and best practices." },
+      "vision": { "title": "End-to-end vision", "description": "A holistic approach to development, from frontend to backend." },
+      "collab": { "title": "Collaboration", "description": "Effective teamwork and transparent communication." },
+      "innovation": { "title": "Innovation", "description": "Always watching the latest technologies and trends." },
+      "quality": { "title": "Quality", "description": "I make sure deliverables are solid and match client needs." },
+      "security": { "title": "Security", "description": "I build with security standards and safe delivery in mind." },
+      "flexibility": { "title": "Flexibility", "description": "I adapt to your needs and constraints." },
+      "ux": { "title": "User Experience", "description": "I aim for intuitive products that are easy to use." }
+    }
+  },
+  "experience": {
+    "eyebrow": "Career",
+    "title": "Professional experience",
+    "subtitle": "From Ionic mobile apps to institutional platforms, including a technical lead role at DIZIGROUP. Click an experience to see the details.",
+    "viewDetail": "View details",
+    "notFoundTitle": "Experience not found",
+    "notFoundText": "This mission does not exist or has been moved.",
+    "backToList": "Back to experience",
+    "backToPath": "Back to career path",
+    "company": "Company",
+    "responsibilities": "Responsibilities",
+    "achievements": "Key results",
+    "technologies": "Technologies",
+    "technologiesHint": "Stack used on this mission.",
+    "deliverables": "Deliverables",
+    "projectsTitle": "Projects delivered",
+    "projectsHint": "Products and platforms shipped as part of this experience.",
+    "usefulLinks": "Useful links",
+    "usefulLinksHint": "Sites, demos and documentation related to this mission.",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "skills": {
+    "eyebrow": "Expertise",
+    "title": "Skills",
+    "subtitle": "Web, mobile and APIs: Ionic, React, Angular, Laravel, NestJS, with a focus on Clean Architecture and SOLID.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Databases",
+      "tools": "Tools & DevOps",
+      "mobile": "Mobile",
+      "soft": "Soft Skills"
+    },
+    "soft": {
+      "problemSolving": "Problem solving",
+      "architecture": "Clean Architecture & SOLID",
+      "teamwork": "Teamwork",
+      "communication": "Communication",
+      "learning": "Fast learning",
+      "projectMgmt": "Project management"
+    }
+  },
+  "projects": {
+    "eyebrow": "Work",
+    "title": "Projects",
+    "subtitle": "Mobile apps, web platforms and business tools delivered for companies and institutions.",
+    "filters": {
+      "all": "All projects",
+      "web": "Web apps",
+      "mobile": "Mobile apps",
+      "featured": "Featured"
+    },
+    "featured": "Featured project",
+    "viewSite": "View site",
+    "sourceCode": "Source code",
+    "ctaTitle": "Have a project in mind?",
+    "ctaText": "Let's discuss your needs and build a solid solution.",
+    "ctaButton": "Let's talk about your project"
+  },
+  "education": {
+    "eyebrow": "Path",
+    "title": "Education & certifications",
+    "subtitle": "Mathematics and Computer Science degree at UCAD-FST, completed by Sonatel Academy, SunuCode and online certificates.",
+    "academic": "Academic education",
+    "certifications": "Certifications",
+    "highlights": "Highlights:",
+    "continuousTitle": "Continuous learning",
+    "continuousText": "I strongly believe in continuous learning. Every week I dedicate time to exploring new technologies, taking online courses and joining webinars to stay current with industry innovations.",
+    "items": {
+      "l3": {
+        "period": "February 2026 – Present",
+        "degree": "Bachelor Year 3 — Mathematics and Computer Science",
+        "description": "Third year of the bachelor's degree, in parallel with web and mobile development missions.",
+        "h1": "Deeper computer science topics",
+        "h2": "Applied software development projects",
+        "h3": "Databases and systems"
+      },
+      "l2": {
+        "period": "December 2025",
+        "degree": "Bachelor Year 2 — Mathematics and Computer Science",
+        "description": "Second year of the bachelor's degree in mathematics and computer science.",
+        "h1": "Algorithms and data structures",
+        "h2": "Programming and systems",
+        "h3": "Applied mathematics"
+      },
+      "sonatel": {
+        "period": "February 2024 – November 2024",
+        "degree": "Web and mobile development",
+        "description": "Web and mobile development training, completed with a Sonatel Academy certificate.",
+        "h1": "Full-stack web development",
+        "h2": "Mobile applications",
+        "h3": "Hands-on projects"
+      },
+      "sunucode": {
+        "period": "July 2023 – December 2023",
+        "degree": "Web development",
+        "description": "Practical web development track, from frontend to backend.",
+        "h1": "HTML, CSS and JavaScript",
+        "h2": "Interfaces and APIs",
+        "h3": "Web development certificate"
+      },
+      "l1": {
+        "period": "November 2022 – June 2023",
+        "degree": "Bachelor Year 1 — Mathematics and Computer Science",
+        "description": "First year of the bachelor's degree in mathematics and computer science.",
+        "h1": "Mathematics fundamentals",
+        "h2": "Introduction to computer science",
+        "h3": "Algorithms"
+      }
+    },
+    "certs": {
+      "sonatel": "Web and mobile development",
+      "sql": "Introduction to Relational Database and SQL",
+      "apis": "APIs in Node.js : Write a RESTful API Backend Application",
+      "sunucode": "Web development certificate",
+      "ai": "Artificial Intelligence certificate"
+    }
+  },
+  "contact": {
+    "eyebrow": "Connect",
+    "title": "Contact",
+    "subtitle": "Ready to bring your project to life? Let's discuss your needs and goals.",
+    "stayInTouch": "Let's stay in touch",
+    "followMe": "Follow me",
+    "references": "Professional references",
+    "phone": "Phone",
+    "location": "Location",
+    "locationValue": "Dakar, Senegal",
+    "formTitle": "Send me a message",
+    "name": "Full name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "you@email.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "Message subject",
+    "message": "Message",
+    "messagePlaceholder": "Describe your project or request...",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Message sent successfully. I will get back to you soon.",
+    "error": "Something went wrong. Please try again or contact me directly."
+  },
+  "lang": {
+    "fr": "FR",
+    "en": "EN",
+    "switchTo": "Switch language"
+  }
+}

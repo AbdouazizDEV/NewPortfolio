@@ -1,9 +1,32 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Filter } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { projectsEn } from '../../data/projects.en';
 
 const Projects = () => {
+  const { t, i18n } = useTranslation();
+  const isEn = i18n.language.startsWith('en');
   const [activeFilter, setActiveFilter] = useState('all');
+
+  const labelsEn: Record<string, string> = {
+    'Voir le site web': 'View website',
+    'Voir JantAgro': 'View JantAgro',
+    'Voir Jant Tech': 'View Jant Tech',
+    'Voir la démo vidéo': 'Watch video demo',
+    'Voir le back-office': 'View back-office',
+    'Voir la documentation API': 'View API documentation',
+    'Voir la démo vidéo app Mobile': 'Watch mobile app video demo',
+    'Voir la plateforme': 'View platform',
+    'Documentation API': 'API documentation',
+    'Écoles au Sénégal': 'Schools in Senegal',
+  };
+
+  const localizeLabel = (label?: string): string | undefined => {
+    if (!label) return undefined;
+    if (label === 'Voir le site') return t('projects.viewSite');
+    return isEn ? labelsEn[label] ?? label : label;
+  };
 
   const projects = [
     {
@@ -233,7 +256,7 @@ const Projects = () => {
       featured: false
     },
     {
-      id:11,
+      id: 20,
       title: 'Forum des Territoires',
       description: "Refonte du site institutionnel Afrique–Europe : programme (conférences, immersion, exposition, Gaindé Awards), parcours inscription/partenaires, actualités et multilinguisme FR/EN/ES/中文. Mission freelance Février 2026.",
       image: 'https://res.cloudinary.com/dhivn2ahm/image/upload/v1792395505/Logo_Forum_1_xptsgf.png',
@@ -247,10 +270,10 @@ const Projects = () => {
   ];
 
   const filters = [
-    { key: 'all', label: 'Tous les projets' },
-    { key: 'web', label: 'Applications Web' },
-    { key: 'mobile', label: 'Applications Mobile' },
-    { key: 'featured', label: 'Projets Phares' }
+    { key: 'all', label: t('projects.filters.all') },
+    { key: 'web', label: t('projects.filters.web') },
+    { key: 'mobile', label: t('projects.filters.mobile') },
+    { key: 'featured', label: t('projects.filters.featured') }
   ];
 
   const filteredProjects = projects.filter(project => {
@@ -310,10 +333,10 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="mb-14 max-w-2xl"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-800 mb-3">Réalisations</p>
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#14241c]">Projets</h2>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-800 mb-3">{t('projects.eyebrow')}</p>
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#14241c]">{t('projects.title')}</h2>
           <p className="mt-4 text-lg text-stone-600 leading-relaxed">
-            Applications mobiles, plateformes web et outils métier livrés pour des entreprises et des institutions.
+            {t('projects.subtitle')}
           </p>
         </motion.div>
 
@@ -371,7 +394,7 @@ const Projects = () => {
                   
                   {project.featured && (
                     <div className="absolute top-4 left-4 rounded-full bg-emerald-800 px-3 py-1 text-sm font-medium text-white">
-                      ⭐ Projet Phare
+                      ⭐ {t('projects.featured')}
                     </div>
                   )}
                 </div>
@@ -383,7 +406,7 @@ const Projects = () => {
                   </h3>
                   
                   <p className="mb-3 line-clamp-3 text-sm leading-6 text-stone-600">
-                    {project.description}
+                    {isEn ? projectsEn[project.id] ?? project.description : project.description}
                   </p>
 
                   <div className="mb-3 flex flex-wrap gap-1.5">
@@ -400,15 +423,15 @@ const Projects = () => {
                   {/* Action Buttons */}
                   <div className="flex flex-wrap gap-2">
                     {[
-                      project.link ? { href: project.link, label: (project as { linkLabel?: string }).linkLabel ?? 'Voir le projet' } : null,
+                      project.link ? { href: project.link, label: localizeLabel((project as { linkLabel?: string }).linkLabel) ?? (isEn ? 'View project' : 'Voir le projet') } : null,
                       (project as { link2?: string; linkLabel2?: string }).link2
-                        ? { href: (project as { link2: string }).link2, label: (project as { linkLabel2?: string }).linkLabel2 ?? 'Lien' }
+                        ? { href: (project as { link2: string }).link2, label: localizeLabel((project as { linkLabel2?: string }).linkLabel2) ?? (isEn ? 'Link' : 'Lien') }
                         : null,
                       (project as { link3?: string; linkLabel3?: string }).link3
-                        ? { href: (project as { link3: string }).link3, label: (project as { linkLabel3?: string }).linkLabel3 ?? 'Lien' }
+                        ? { href: (project as { link3: string }).link3, label: localizeLabel((project as { linkLabel3?: string }).linkLabel3) ?? (isEn ? 'Link' : 'Lien') }
                         : null,
                       (project as { link4?: string; linkLabel4?: string }).link4
-                        ? { href: (project as { link4: string }).link4, label: (project as { linkLabel4?: string }).linkLabel4 ?? 'Lien' }
+                        ? { href: (project as { link4: string }).link4, label: localizeLabel((project as { linkLabel4?: string }).linkLabel4) ?? (isEn ? 'Link' : 'Lien') }
                         : null,
                     ]
                       .filter((item): item is { href: string; label: string } => Boolean(item))
@@ -433,7 +456,7 @@ const Projects = () => {
                         className="inline-flex items-center rounded-full border border-stone-300 px-3 py-2 text-xs font-medium text-stone-700 transition hover:bg-stone-50"
                       >
                         <Github size={14} className="mr-1.5" />
-                        Code source
+                        {t('projects.sourceCode')}
                       </a>
                     )}
                   </div>
@@ -452,10 +475,9 @@ const Projects = () => {
           className="mt-16 text-center"
         >
           <div className="rounded-3xl bg-emerald-900 p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Intéressé par mon travail ?</h3>
+            <h3 className="text-2xl font-bold mb-4">{t('projects.ctaTitle')}</h3>
             <p className="text-emerald-100 mb-6 max-w-2xl mx-auto">
-              Je suis toujours ouvert à de nouveaux défis et collaborations. 
-              N'hésitez pas à me contacter pour discuter de vos projets.
+              {t('projects.ctaText')}
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -466,7 +488,7 @@ const Projects = () => {
               }}
               className="rounded-full bg-white px-8 py-3 font-medium text-emerald-900 transition hover:bg-emerald-50"
             >
-              Discutons de votre projet
+              {t('projects.ctaButton')}
             </motion.button>
           </div>
         </motion.div>

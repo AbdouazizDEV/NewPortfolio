@@ -14,8 +14,12 @@ import {
   AlertCircle
 } from 'lucide-react';
 import { SiWhatsapp } from 'react-icons/si';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t, i18n } = useTranslation();
+  const isEn = i18n.language.startsWith('en');
+  const phoneSuffix = isEn ? ': ' : ' : ';
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -86,7 +90,7 @@ const Contact = () => {
     },
     {
       icon: Phone,
-      label: 'Téléphone',
+      label: t('contact.phone'),
       value: '+221 77 298 01 05',
       href: 'tel:+221772980105',
       color: 'text-blue-600'
@@ -100,8 +104,8 @@ const Contact = () => {
     },
     {
       icon: MapPin,
-      label: 'Localisation',
-      value: 'Dakar, Sénégal',
+      label: t('contact.location'),
+      value: t('contact.locationValue'),
       href: 'https://www.google.com/maps/place/Dakar/@14.7166667,-17.4666667,12z/data=!3m1!4b1!4m6!3m5!1s0x167995a02260431d:0x6650fd4ba773e60!8m2!3d14.7166667!4d-17.4666667!16s%2Fg%2F11c4022sqw?entry=ttu&g_ep=EgoyMDI1MDIwMi4wIKXMDSoASAFQAw%3D%3D',
       color: 'text-orange-600'
     }
@@ -138,10 +142,10 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="mb-14 max-w-2xl"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-800 mb-3">Échange</p>
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#14241c]">Contact</h2>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-800 mb-3">{t('contact.eyebrow')}</p>
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#14241c]">{t('contact.title')}</h2>
           <p className="mt-4 text-lg text-stone-600 leading-relaxed">
-            Prêt à donner vie à votre projet ? Discutons de vos besoins et de vos objectifs.
+            {t('contact.subtitle')}
           </p>
         </motion.div>
 
@@ -153,12 +157,12 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Restons en contact</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">{t('contact.stayInTouch')}</h3>
             
             <div className="space-y-6 mb-8">
               {contactInfo.map((contact, index) => (
                 <motion.a
-                  key={contact.label}
+                  key={contact.href}
                   href={contact.href}
                   target={contact.href.startsWith('http') ? '_blank' : undefined}
                   rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
@@ -182,7 +186,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div>
-              <h4 className="font-semibold text-gray-900 mb-4">Suivez-moi</h4>
+              <h4 className="font-semibold text-gray-900 mb-4">{t('contact.followMe')}</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -212,18 +216,18 @@ const Contact = () => {
               transition={{ delay: 0.5 }}
               className="mt-8 p-6 bg-gradient-to-r from-emerald-50 to-blue-50 rounded-xl"
             >
-              <h4 className="font-bold text-gray-900 mb-2">Références Professionnelles</h4>
+              <h4 className="font-bold text-gray-900 mb-2">{t('contact.references')}</h4>
               <p className="text-gray-600">
                 <strong>Birane Baila Wane</strong><br />
-                Téléphone : +221 77 766 95 95
+                {t('contact.phone')}{phoneSuffix}+221 77 766 95 95
               </p>
               <p className="mt-3 text-gray-600">
                 <strong>Cheikh Sow</strong><br />
-                Téléphone : +221 77 138 42 09
+                {t('contact.phone')}{phoneSuffix}+221 77 138 42 09
               </p>
               <p className="mt-3 text-gray-600">
                 <strong>Pape Mamadou DIOP</strong><br />
-                Téléphone : +33 7 84 93 41 88
+                {t('contact.phone')}{phoneSuffix}+33 7 84 93 41 88
               </p>
             </motion.div>
           </motion.div>
@@ -236,7 +240,7 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Envoyez-moi un message</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('contact.formTitle')}</h3>
               
               {/* Success/Error Messages */}
               {submitStatus === 'success' && (
@@ -246,7 +250,7 @@ const Contact = () => {
                   className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center text-green-700"
                 >
                   <CheckCircle size={20} className="mr-3" />
-                  Message envoyé avec succès ! Je vous répondrai rapidement.
+                  {t('contact.success')}
                 </motion.div>
               )}
 
@@ -257,7 +261,7 @@ const Contact = () => {
                   className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center text-red-700"
                 >
                   <AlertCircle size={20} className="mr-3" />
-                  Une erreur est survenue. Veuillez réessayer.
+                  {t('contact.error')}
                 </motion.div>
               )}
 
@@ -265,7 +269,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Nom complet
+                      {t('contact.name')}
                     </label>
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
@@ -277,14 +281,14 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
-                        placeholder="Votre nom"
+                        placeholder={t('contact.namePlaceholder')}
                       />
                     </div>
                   </div>
                   
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email
+                      {t('contact.email')}
                     </label>
                     <div className="relative">
                       <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
@@ -296,7 +300,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
-                        placeholder="votre@email.com"
+                        placeholder={t('contact.emailPlaceholder')}
                       />
                     </div>
                   </div>
@@ -304,7 +308,7 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Sujet
+                    {t('contact.subject')}
                   </label>
                   <input
                     type="text"
@@ -314,13 +318,13 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
-                    placeholder="Sujet de votre message"
+                    placeholder={t('contact.subjectPlaceholder')}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
+                    {t('contact.message')}
                   </label>
                   <div className="relative">
                     <MessageSquare className="absolute left-3 top-4 text-gray-400" size={18} />
@@ -332,7 +336,7 @@ const Contact = () => {
                       required
                       rows={6}
                       className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors resize-none"
-                      placeholder="Décrivez votre projet ou votre demande..."
+                      placeholder={t('contact.messagePlaceholder')}
                     />
                   </div>
                 </div>
@@ -349,7 +353,7 @@ const Contact = () => {
                   ) : (
                     <Send size={20} className="mr-2" />
                   )}
-                  {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
+                  {isSubmitting ? t('contact.sending') : t('contact.send')}
                 </motion.button>
               </form>
             </div>
@@ -365,10 +369,12 @@ const Contact = () => {
           className="mt-16 text-center border-t border-gray-200 pt-8"
         >
           <p className="text-gray-600">
-            © 2025 Abdou Aziz Diop. Développeur Full-Stack passionné basé à Dakar, Sénégal.
+            {isEn
+              ? '© 2025 Abdou Aziz Diop. Passionate Full-Stack developer based in Dakar, Senegal.'
+              : '© 2025 Abdou Aziz Diop. Développeur Full-Stack passionné basé à Dakar, Sénégal.'}
           </p>
           <p className="text-sm text-gray-500 mt-2">
-            Créé avec ❤️ et beaucoup de café ☕
+            {isEn ? 'Built with ❤️ and lots of coffee ☕' : 'Créé avec ❤️ et beaucoup de café ☕'}
           </p>
         </motion.div>
       </div>

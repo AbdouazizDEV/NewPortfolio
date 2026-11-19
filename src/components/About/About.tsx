@@ -1,95 +1,62 @@
-import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Code, Globe, Users, Lightbulb, CheckCircle, Shield, Clock, UserRound } from 'lucide-react';
 
 const About = () => {
+  const { t } = useTranslation();
+
   const stats = [
-    { number: '3', label: 'Années d\'expérience' },
-    { number: '15+', label: 'Projets réalisés' },
-    { number: '4', label: 'Langues parlées' },
-    { number: '100%', label: 'Satisfaction client' }
+    { number: '3', label: t('about.stats.years') },
+    { number: '15+', label: t('about.stats.projects') },
+    { number: '4', label: t('about.stats.languages') },
+    { number: '100%', label: t('about.stats.satisfaction') },
   ];
 
   const values = [
-    {
-      icon: Code,
-      title: 'Code de qualité',
-      description: 'Je privilégie la lisibilité, la maintenabilité et les bonnes pratiques.'
-    },
-    {
-      icon: Globe,
-      title: 'Vision globale',
-      description: 'Une approche holistique du développement, du frontend au backend.'
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'Travail d\'équipe efficace et communication transparente.'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Innovation',
-      description: 'Toujours à l\'affût des dernières technologies et tendances.'
-    },
-    {
-      icon: CheckCircle,
-      title: 'Qualité',
-      description: 'Je m\'assure que les livrables sont de qualité et répondent aux besoins des clients.'
-    },
-    {
-      icon: Shield,
-      title: 'Sécurité',
-      description: 'Je m\'assure que les livrables sont sécurisés et respectent les normes de sécurité.'
-    },
-    {
-      icon: Clock,
-      title: 'Flexibilité',
-      description: 'Je m\'adapte à vos besoins et à vos contraintes.'
-    },
-    {
-      icon: UserRound,
-      title: 'User Experience',
-      description: 'Je m\'assure que les livrables sont intuitifs et faciles à utiliser.'
-    }
-  ];
+    { icon: Code, key: 'code' },
+    { icon: Globe, key: 'vision' },
+    { icon: Users, key: 'collab' },
+    { icon: Lightbulb, key: 'innovation' },
+    { icon: CheckCircle, key: 'quality' },
+    { icon: Shield, key: 'security' },
+    { icon: Clock, key: 'flexibility' },
+    { icon: UserRound, key: 'ux' },
+  ] as const;
 
   return (
-    <section id="about" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="bg-white py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-800 mb-3">Profil</p>
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#14241c]">À propos</h2>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-800">
+            {t('about.eyebrow')}
+          </p>
+          <h2 className="text-4xl font-semibold tracking-tight text-[#14241c] md:text-5xl">
+            {t('about.title')}
+          </h2>
         </motion.div>
 
         <div className="mb-12 grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
-          {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-2xl font-semibold tracking-tight text-[#14241c] mb-6">
-              Développeur Full-Stack web et mobile
+            <h3 className="mb-6 text-2xl font-semibold tracking-tight text-[#14241c]">
+              {t('about.subtitle')}
             </h3>
-            <div className="space-y-4 text-stone-600 leading-relaxed">
+            <div className="space-y-4 leading-relaxed text-stone-600">
+              <p>{t('about.p1')}</p>
+              <p>{t('about.p2')}</p>
               <p>
-                J'accompagne entreprises, institutions et startups dans la conception de plateformes web,
-                d'applications mobiles et de systèmes digitaux capables de répondre à des problèmes concrets.
-              </p>
-              <p>
-                Spécialisé dans l'écosystème JavaScript, je couvre l'analyse des besoins, l'architecture,
-                le développement, l'intégration d'API, le déploiement et la maintenance. Les missions récentes
-                vont de La Cuisine de Maman (Ionic) au pilotage technique chez DIZIGROUP.
-              </p>
-              <p>
-                <strong className="text-[#14241c]">Langues :</strong> Français, Anglais, Wolof, Serrère
+                <strong className="text-[#14241c]">{t('about.languagesLabel')}</strong>{' '}
+                {t('about.languagesValue')}
               </p>
             </div>
 
@@ -100,15 +67,13 @@ const About = () => {
               transition={{ delay: 0.2 }}
               className="mt-8"
             >
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">Ma philosophie</h4>
-              <p className="text-gray-600 italic">
-                "Le code n'est pas seulement fonctionnel, il doit être élégant, maintenable 
-                et résoudre de vrais problèmes. Chaque ligne écrite doit apporter de la valeur."
-              </p>
+              <h4 className="mb-4 text-lg font-semibold text-gray-900">
+                {t('about.philosophyTitle')}
+              </h4>
+              <p className="italic text-gray-600">{t('about.philosophy')}</p>
             </motion.div>
           </motion.div>
 
-          {/* Stats */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -124,39 +89,44 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
-                className="text-center p-6 bg-[#f7f5f0] rounded-3xl border border-stone-200/80"
+                className="rounded-3xl border border-stone-200/80 bg-[#f7f5f0] p-6 text-center"
               >
-                <div className="text-3xl font-bold text-emerald-600 mb-2">{stat.number}</div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="mb-2 text-3xl font-bold text-emerald-600">{stat.number}</div>
+                <div className="font-medium text-gray-600">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
         </div>
 
-        {/* Values */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h3 className="text-2xl font-semibold tracking-tight text-[#14241c] text-center mb-12">Ce qui guide mon travail</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <h3 className="mb-12 text-center text-2xl font-semibold tracking-tight text-[#14241c]">
+            {t('about.valuesTitle')}
+          </h3>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {values.map((value, index) => (
               <motion.div
-                key={value.title}
+                key={value.key}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="text-center p-6 bg-white rounded-3xl border border-stone-200/80 hover:-translate-y-1 transition-all duration-300"
+                className="rounded-3xl border border-stone-200/80 bg-white p-6 text-center transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-emerald-100 to-emerald-200">
                   <value.icon className="text-emerald-600" size={24} />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">{value.title}</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
+                <h4 className="mb-3 text-lg font-semibold text-gray-900">
+                  {t(`about.values.${value.key}.title`)}
+                </h4>
+                <p className="text-sm leading-relaxed text-gray-600">
+                  {t(`about.values.${value.key}.description`)}
+                </p>
               </motion.div>
             ))}
           </div>
